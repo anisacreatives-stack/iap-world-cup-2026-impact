@@ -352,3 +352,4 @@ a { color: inherit; }
 /* Map: let the page background show through the map's black, so there's no visible box */
 .map { border-radius: 0; overflow: visible; isolation: auto; }
 .map img { mix-blend-mode: lighten; }
+.innov-card > img.img-square-white { height: auto; aspect-ratio: 1 / 1; object-fit: contain; background: #fff; }
