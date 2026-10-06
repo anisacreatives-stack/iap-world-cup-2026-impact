@@ -349,3 +349,6 @@ a { color: inherit; }
 .topnav .brand { opacity: 0; transition: opacity 0.3s; }
 .topnav.solid .brand { opacity: 1; }
 .hero-inner { padding-top: 110px; }
+/* Map: let the page background show through the map's black, so there's no visible box */
+.map { border-radius: 0; overflow: visible; isolation: auto; }
+.map img { mix-blend-mode: lighten; }
