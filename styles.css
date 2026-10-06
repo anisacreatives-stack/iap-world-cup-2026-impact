@@ -148,7 +148,7 @@ a { color: inherit; }
 /* ---------- Ambassadors ---------- */
 .ambassadors { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .amb { margin: 0; background: #e9e7e4; overflow: hidden; border-radius: 4px; }
-.amb img { width: 100%; height: auto; background: #000; filter: grayscale(1); transform: scale(1.04); transition: filter 0.6s, transform 0.8s var(--ease); }
+.amb img { width: 100%; height: auto; aspect-ratio: 645 / 659; object-fit: cover; object-position: center bottom; background: #000; filter: grayscale(1); transform: scale(1.04); transition: filter 0.6s, transform 0.8s var(--ease); }
 .amb:hover img, .amb.in:hover img { filter: none; transform: scale(1.08); }
 .amb.in img { filter: grayscale(0.15); transform: none; }
 .amb figcaption { font-family: var(--display); font-size: 28px; padding: 14px 16px 16px; line-height: 1; }
