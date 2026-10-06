@@ -7,7 +7,7 @@ window.CITIES = [
     id: "atlanta", name: "Atlanta", country: "United States",
     tagline: "Building a cross-sector model for major-event readiness",
     lede: "In Atlanta, It’s a Penalty’s campaign demonstrated how a major sporting event can be used to mobilise government, civil society, businesses, hospitality and public agencies around a shared prevention objective.",
-    img: "img/atlanta.jpg", alt: "Lamar billboard in Atlanta: Human trafficking has no place in Atlanta",
+    img: "img/atlanta-hd.jpg", alt: "Lamar billboard in Atlanta: Human trafficking has no place in Atlanta",
     headline: [423.96, "M+", 2, "estimated reach and exposure"],
     stats: [
       [13.7, "impressions across 310 IKE smart city digital kiosks", { decimals: 1, suffix: "M" }],
@@ -45,7 +45,7 @@ window.CITIES = [
     id: "boston", name: "Boston / Massachusetts", country: "United States",
     tagline: "Mobilising public infrastructure for prevention",
     lede: "Across Massachusetts, It’s a Penalty’s FIFA World Cup 2026 campaign demonstrated how government leadership, transport networks and cross-sector partnership can be mobilised around a major sporting event to strengthen human trafficking awareness and prevention.",
-    img: "img/boston.jpg", alt: "Bus carrying It's a Penalty campaign advert",
+    img: "img/boston-hd.jpg", alt: "Bus carrying It's a Penalty campaign advert",
     headline: [17.91, "M+", 2, "estimated reach and exposure"],
     stats: [
       [16.88, "potential media impressions from launch/press conference coverage", { decimals: 2, suffix: "M" }],
@@ -61,7 +61,7 @@ window.CITIES = [
       "The campaign was formally launched on June 4 at the Massachusetts State House, with a cross-sector press conference bringing together government, law enforcement and anti-trafficking stakeholders. Speakers included Lieutenant Governor Kim Driscoll, reflecting the high-level public commitment behind Massachusetts’ World Cup trafficking prevention efforts."
     ],
     ecosystem: "48 endangered missing children safely recovered through Operation Yellow Card. 14 arrests across two Boston operations targeting child exploitation and demand reduction. These wider response outcomes cannot be directly attributed to It’s a Penalty’s campaign, but provide important context for the broader prevention, protection and enforcement effort taking place across Massachusetts during the tournament.",
-    gallery: [["img/boston-launch.jpg", "Campaign launch press conference at the Massachusetts State House"]],
+    gallery: [["img/boston-launch-hd.jpg", "Campaign launch press conference at the Massachusetts State House"]],
     moreStats: [
       [48, "endangered missing children safely recovered through Operation Yellow Card"],
       [14, "arrests across two Boston operations targeting child exploitation and demand reduction"]
@@ -82,7 +82,7 @@ window.CITIES = [
     id: "kansas-city", name: "Kansas City", country: "United States",
     tagline: "Mobilising a statewide response",
     lede: "In Kansas City and across Missouri, It’s a Penalty’s FIFA World Cup 2026 campaign demonstrated the value of combining formal government partnership with public awareness, community engagement and clear pathways for people to report concerns.",
-    img: "img/kansas.jpg", alt: "Missouri Attorney General Catherine Hanaway speaking at the It's a Penalty launch",
+    img: "img/kansas-hd.jpg", alt: "Missouri Attorney General Catherine Hanaway speaking at the It's a Penalty launch",
     caption: "Missouri Attorney General, Catherine Hanaway, speaking at the It’s a Penalty launch",
     headline: [510.42, "M", 2, "estimated campaign reach and exposure"],
     stats: [
@@ -113,7 +113,7 @@ window.CITIES = [
     id: "los-angeles", name: "Los Angeles", country: "United States",
     tagline: "Building a lasting major-event response",
     lede: "In Los Angeles, It’s a Penalty’s FIFA World Cup 2026 campaign formed part of a much broader effort to strengthen the region’s response to human trafficking — using the tournament not only as an opportunity for public awareness, but to strengthen coordination, knowledge and infrastructure that can continue through the 2027 Super Bowl and LA28 Olympic and Paralympic Games.",
-    img: "img/losangeles.jpg", alt: "Digital billboard in Los Angeles: Human trafficking has no place in Los Angeles",
+    img: "img/losangeles-hd.jpg", alt: "Digital billboard in Los Angeles: Human trafficking has no place in Los Angeles",
     headline: [29.07, "M+", 2, "estimated reach and exposure"],
     stats: [
       [1.59, "Kevani digital billboard impressions", { decimals: 2, suffix: "M" }],
@@ -130,7 +130,7 @@ window.CITIES = [
       "Importantly, this public-facing activity was connected to a much wider locally led response. It’s a Penalty played a formal coordinating role within the LARHTTF Sports and Major Events Committee, with Dana Hoyes, IAP’s US Campaigns Director, serving as Co-Chair of the Awareness Subcommittee. This helped connect the campaign’s public-awareness activity with the region’s wider prevention and response efforts."
     ],
     ecosystem: "Across the wider Los Angeles anti-trafficking response during the same period, law-enforcement partners reported 216 arrests and 35 rescues across operations led by the Los Angeles County Sheriff’s Department and Los Angeles Police Department, while at least 20 survivors accepted direct support through LARHTTF partner organisations. These outcomes cannot be attributed directly to It’s a Penalty, but demonstrate the wider prevention, identification and response ecosystem within which the campaign operated.",
-    gallery: [["img/la-launch.jpg", "Campaign launch at Union Station, Los Angeles"]],
+    gallery: [["img/la-launch-hd.jpg", "Campaign launch at Union Station, Los Angeles"]],
     moreStats: [
       [807691, "impressions at The Landmark 105"],
       [782447, "impressions through Bricklights"],
@@ -162,7 +162,7 @@ window.CITIES = [
 
   {
     id: "miami", name: "Miami", country: "United States",
-    img: "img/robot.jpg", alt: "Serve Robotics delivery robot in Miami with It's a Penalty branding",
+    img: "img/robot-hd.jpg", alt: "Serve Robotics delivery robot in Miami with It's a Penalty branding",
     headline: [35.04, "M+", 2, "quantified opportunities for reach and exposure across campaign channels*"],
     stats: [
       [23.71, "potential media impressions from launch/press conference coverage", { decimals: 2, suffix: "M" }],
@@ -214,7 +214,7 @@ window.CITIES = [
     id: "new-york", name: "New York / New Jersey", country: "United States",
     tagline: "Survivor-informed campaigning, government partnership and citywide reach",
     lede: "New York/New Jersey was one of It’s a Penalty’s largest FIFA World Cup 2026 campaign markets, combining formal government partnerships, survivor-informed campaign development and large-scale public visibility across the region.",
-    img: "img/timessquare.jpg", alt: "Times Square digital billboard featuring Tim Weah",
+    img: "img/timessquare-hd.jpg", alt: "Times Square digital billboard featuring Tim Weah",
     headline: [80.04, "M+", 2, "estimated reach and exposure"],
     stats: [
       [24, "LinkNYC impressions", { suffix: "M" }],
@@ -247,7 +247,7 @@ window.CITIES = [
     spotlight: {
       name: "New Jersey Coalition Against Human Trafficking",
       title: "Using the World Cup as a catalyst for community action",
-      img: ["img/partners.jpg", "Campaign partners at the New Jersey launch"],
+      img: ["img/partners-hd.jpg", "Campaign partners at the New Jersey launch"],
       intro: "Alongside its partnership with It’s a Penalty, the New Jersey Coalition Against Human Trafficking developed World Cup ACT – Action Collaborative Against Trafficking, harnessing the momentum of the World Cup to mobilise communities across New Jersey.",
       body: [
         "Central to this work was NJCAHT’s 12-member World Cup Survivor Leader Advisory Council, created and coordinated by Gina Cavallo. The Council met regularly for more than a year and helped shape It’s a Penalty’s campaign messaging and training through lived-experience insight.",
@@ -279,7 +279,7 @@ window.CITIES = [
     ],
     ecoLabel: "From awareness to action",
     ecosystem: "During the tournament period, the Línea y Chat Nacional contra la Trata received 685 reports of possible human trafficking. Consejo Ciudadano reported that prevention campaigns around the World Cup contributed to an increase of up to 60% in reports of possible trafficking. These figures reflect the wider prevention environment in Mexico and cannot be attributed to It’s a Penalty alone.",
-    gallery: [["img/mexico-airport.jpg", "Campaign screen in a Mexican airport"]],
+    gallery: [["img/mexico-airport-hd.jpg", "Campaign screen in a Mexican airport"], ["img/mx-airport-gate-hd.jpg", "Campaign screen at an airport gate"], ["img/mx-airport-wall-hd.jpg", "Campaign screen at an airport"]],
     more: [
       "Coalition partners extended the campaign’s visibility further. In Mexico City, campaign posters were prominently displayed in a 21-metre glass showcase at Zaragoza Metro Station for seven weeks across June and July 2026, with a potential audience of more than 1.5 million people. AGAPE secured a billboard on one of Mexico City’s busiest roads, generating a potential audience of more than 5.4 million, while in Jalisco A21 LATAM secured billboard exposure with a potential audience of 3.9 million in one week.",
       "Through IAP’s corporate partner networks, campaign materials were also distributed through hotels, private rentals and rideshare drivers, extending the campaign into places where visitors and local communities were staying, travelling and working.",
@@ -297,7 +297,7 @@ window.CITIES = [
     spotlight: {
       name: "Fin de la Esclavitud",
       title: "Exceptional local leadership",
-      img: ["img/mexico-congress.jpg", "Fin de la Esclavitud convening"],
+      img: ["img/mexico-congress-hd.jpg", "Fin de la Esclavitud convening"],
       intro: "Fin de la Esclavitud was It’s a Penalty’s lead partner in Mexico and central to the development and delivery of the campaign. Working alongside IAP, the organisation coordinated the wider network of Mexican partners, mobilised stakeholders, helped contextualise campaign messaging and training and connected the World Cup campaign with locally led prevention work.",
       body: [
         "The partnership began in March 2025, more than a year before the tournament. Together, IAP and Fin de la Esclavitud developed relationships across government, civil society, law enforcement, travel and tourism, hospitality, transport, businesses and communities, creating the foundations for a campaign that could operate at scale while remaining rooted in the Mexican context.",
@@ -318,7 +318,7 @@ window.CITIES = [
     id: "guadalajara", name: "Guadalajara", country: "Mexico",
     tagline: "Building momentum before the World Cup",
     lede: "In Guadalajara, the campaign built on more than a year of locally led mobilisation. Working closely with Fin de la Esclavitud, which convened public authorities, civil society, businesses and universities across the city, It’s a Penalty brought the reach and support of its international campaign partners to strengthen and amplify these local efforts before, during and beyond the tournament.",
-    img: "img/guadalajara.jpg", alt: "Campaign screen featuring Oribe Peralta in Guadalajara",
+    img: "img/guadalajara-hd.jpg", alt: "Campaign screen featuring Oribe Peralta in Guadalajara",
     headline: [279627, "+", 0, "people reached through targeted Instagram activity"],
     stats: [
       [399322, "Instagram impressions"],
@@ -333,7 +333,7 @@ window.CITIES = [
     ],
     ecoLabel: "A significant shift in reporting in Jalisco",
     ecosystem: "Alongside this activity, there was a notable change in reporting in Jalisco during the World Cup. The state moved from fifth to second nationally for reports of human trafficking, with Consejo Ciudadano linking the increase to strengthened awareness campaigns and greater citizen participation.",
-    gallery: [["img/oribe.jpg", "Oribe Peralta at the Guadalajara launch"]],
+    gallery: [["img/oribe-hd.jpg", "Oribe Peralta at the Guadalajara launch"], ["img/gdl-airport-ring-hd.jpg", "Campaign screens at Guadalajara airport"]],
     moreStats: [
       [18789, "views of Oribe Peralta’s campaign film on Instagram"],
       [27482, "reach on Instagram"]
@@ -357,7 +357,7 @@ window.CITIES = [
     id: "mexico-city", name: "Mexico City", country: "Mexico",
     tagline: "From preparation to national visibility",
     lede: "In Mexico City, the campaign combined early institutional engagement, high-visibility public awareness and significant national and international media attention.",
-    img: "img/mexico-poster.jpg", alt: "Campaign poster featuring Oribe Peralta on a Mexico City street",
+    img: "img/mexico-poster-hd.jpg", alt: "Campaign poster featuring Oribe Peralta on a Mexico City street",
     headline: [5.4, "M+", 1, "potential audience through the AGAPE billboard"],
     stats: [
       [1.5, "potential audience through Zaragoza metro station", { decimals: 1, suffix: "M+" }],
@@ -376,7 +376,7 @@ window.CITIES = [
     ],
     ecoLabel: "From awareness to action",
     ecosystem: "The national hotline data provides an important additional indicator of behaviour during the same period. As awareness activity intensified around the World Cup, reporting of potential trafficking also increased. Multiple organisations and initiatives contributed to that environment, but the change is strongly aligned with the behaviour the campaign sought to encourage: recognising potential exploitation and taking action by reporting concerns.",
-    gallery: [["img/mexico-city-airport.jpg", "Campaign screen at the airport"]],
+    gallery: [["img/mexico-city-airport.jpg", "Campaign screen at the airport"], ["img/mexico-city-poster2-hd.jpg", "Campaign poster at Metro Universidad"]],
     more: [
       "Three months later, the public campaign was formally launched in Mexico City on 19 May 2026, bringing together civil society, campaign partners and media around the opportunity the World Cup presented to strengthen trafficking prevention and encourage safe reporting.",
       "## Taking the message into the national conversation",
@@ -393,7 +393,7 @@ window.CITIES = [
     id: "monterrey", name: "Monterrey", country: "Mexico",
     tagline: "Building prevention into education and creating a legacy beyond the tournament",
     lede: "In Monterrey, some of the most significant impact of the FIFA World Cup campaign can be seen not simply in the number of people exposed to campaign messaging, but in the prevention activity and local relationships that are continuing beyond the tournament.",
-    img: "img/monterrey-poster.jpg", alt: "It's a Penalty campaign poster featuring Oribe Peralta in Monterrey",
+    img: "img/monterrey-poster-hd.jpg", alt: "It's a Penalty campaign poster featuring Oribe Peralta in Monterrey",
     headline: [338753, "", 0, "people reached through targeted Instagram activity"],
     stats: [
       [473291, "Instagram impressions"],

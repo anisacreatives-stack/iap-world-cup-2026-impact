@@ -394,3 +394,10 @@ a { color: inherit; }
 .ruth { height: 300px; }
 .city-caption { background: none; color: #555; padding: 8px 0 0; }
 .city-country { top: 0; bottom: auto; }
+/* Partner logo marquee */
+.track { align-items: center; }
+.track img { height: 44px; width: auto; margin: 0 44px; flex: none; opacity: 0.92; }
+.track img[src*="emirates"], .track img[src*="ihg"], .track img[src*="hardrock"] { height: 60px; }
+@media (max-width: 700px) { .track img { height: 32px; margin: 0 28px; } .track img[src*="emirates"], .track img[src*="ihg"], .track img[src*="hardrock"] { height: 44px; } }
+.film-credit { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 14px 0 0; font-size: 13px; color: #555; }
+.film-credit img { height: 48px; width: auto; }
