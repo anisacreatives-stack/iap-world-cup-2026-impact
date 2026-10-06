@@ -7,6 +7,41 @@
   const attrs = (o = {}) =>
     `${o.decimals ? ` data-decimals="${o.decimals}"` : ""}${o.prefix ? ` data-prefix="${o.prefix}"` : ""}${o.suffix ? ` data-suffix="${o.suffix}"` : ""}`;
 
+  const statsHTML = (stats) =>
+    stats && stats.length
+      ? `<ul class="city-stats">${stats.map(([v, l, o]) => `<li><b data-count="${v}"${attrs(o)}>0</b><span>${l}</span></li>`).join("")}</ul>`
+      : "";
+  const galleryHTML = (g) =>
+    g && g.length ? `<div class="drop-gallery">${g.map(([src, alt]) => `<figure><img src="${src}" alt="${alt}" loading="lazy"><figcaption>${alt}</figcaption></figure>`).join("")}</div>` : "";
+  const quoteHTML = (q) => (q ? `<blockquote class="city-quote">“${q[0]}”<cite>${q[1]}</cite></blockquote>` : "");
+  function dropsHTML(c) {
+    const m = (window.CITY_MORE || {})[c.id];
+    if (!m) return "";
+    let out = "";
+    if (m.spotlight) {
+      const s = m.spotlight;
+      out += `<details class="drop spotlight reveal"><summary><span class="drop-label">Partner spotlight</span><span class="drop-title">${s.name}</span><span class="drop-icon" aria-hidden="true"></span></summary>
+        <div class="drop-body">
+          <h4>${s.title}</h4>
+          ${s.img ? `<img class="drop-hero" src="${s.img[0]}" alt="${s.img[1]}" loading="lazy">` : ""}
+          <p class="drop-intro">${s.intro}</p>
+          ${statsHTML(s.stats)}
+          ${s.body.map((p) => `<p>${p}</p>`).join("")}
+          ${s.list ? `<ol class="drop-list">${s.list.map((x) => `<li>${x}</li>`).join("")}</ol>` : ""}
+          ${quoteHTML(s.quote)}
+          ${s.closing ? `<p class="drop-closing">${s.closing}</p>` : ""}
+        </div></details>`;
+    }
+    out += `<details class="drop reveal"><summary><span class="drop-label">Read more</span><span class="drop-title">The full ${c.name} story</span><span class="drop-icon" aria-hidden="true"></span></summary>
+      <div class="drop-body">
+        ${galleryHTML(m.gallery)}
+        ${statsHTML(m.stats)}
+        ${(m.more || []).map((p) => `<p>${p}</p>`).join("")}
+        ${m.closing ? `<p class="drop-closing">${m.closing}</p>` : ""}
+      </div></details>`;
+    return out;
+  }
+
   (window.CITIES || []).forEach((c, i) => {
     const t = document.createElement("a");
     t.href = "#" + c.id;
@@ -31,6 +66,7 @@
         ${c.body.map((p) => `<p class="reveal">${p}</p>`).join("")}
         ${c.quote ? `<blockquote class="city-quote reveal">“${c.quote[0]}”<cite>${c.quote[1]}</cite></blockquote>` : ""}
         <p class="eco reveal"><strong>Wider response:</strong> ${c.ecosystem} <em>These outcomes cannot be attributed directly to It's a Penalty.</em></p>
+        ${dropsHTML(c)}
       </div>`;
     list.appendChild(sec);
   });
@@ -147,6 +183,14 @@
     addEventListener("scroll", () => requestAnimationFrame(lightUp), { passive: true });
     lightUp();
   }
+
+  /* ---------- Drop-ins: animate open, load bars inside ---------- */
+  document.querySelectorAll("details.drop").forEach((d) => {
+    d.addEventListener("toggle", () => {
+      d.classList.toggle("opened", d.open);
+      if (d.open) setTimeout(() => d.querySelector(".drop-body").classList.add("in"), 30);
+    });
+  });
 
   /* ---------- Highlight current city tab ---------- */
   const tabLinks = Array.from(tabs.querySelectorAll("a"));

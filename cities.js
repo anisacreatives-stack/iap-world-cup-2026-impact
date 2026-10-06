@@ -120,7 +120,7 @@ window.CITIES = [
       "Formal partnerships with the New Jersey Office of the Attorney General and NYC's Mayor's Office to End Domestic and Gender-Based Violence, with the New Jersey Coalition Against Human Trafficking as principal NGO partner and support from the Port Authority.",
       "Through NJCAHT, Gina Cavallo created and led a 12-member Survivor Leader Advisory Council that met for more than a year to shape messaging and training."
     ],
-    quote: ["The strength of this campaign came from bringing survivors to the table throughout its development.", "Gina Cavallo, NJCAHT"],
+    
     ecosystem: "New Jersey operations recovered 97 suspected victims with 71 arrests; the NYPD Special Victims Unit made 89 arrests and offered support to 43 survivors."
   },
   {
@@ -185,7 +185,7 @@ window.CITIES = [
   {
     id: "monterrey", name: "Monterrey", country: "Mexico",
     tagline: "Building prevention into education",
-    img: "img/oribe.jpg", alt: "Oribe Peralta with an It's a Penalty representative",
+    img: "img/monterrey-poster.jpg", alt: "It's a Penalty campaign poster featuring Oribe Peralta in Monterrey",
     headline: [338753, "", 0, "people reached through targeted Instagram"],
     stats: [
       [473291, "Instagram impressions"],
