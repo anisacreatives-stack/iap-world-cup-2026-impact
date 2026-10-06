@@ -195,6 +195,25 @@
     });
   });
 
+  /* ---------- Campaign film: autoplay (muted) when in view, pause when scrolled away ---------- */
+  const film = document.querySelector(".film iframe");
+  if (film) {
+    const cmd = (func) => film.contentWindow && film.contentWindow.postMessage(JSON.stringify({ event: "command", func, args: [] }), "*");
+    let started = false;
+    new IntersectionObserver(
+      (entries) => entries.forEach((en) => {
+        if (en.isIntersecting) {
+          if (!started) {
+            // Don't autoplay for people who've asked their device to reduce motion
+            film.src = reduce ? film.dataset.src.replace("&autoplay=1", "") : film.dataset.src;
+            started = true;
+          } else if (!reduce) cmd("playVideo");
+        } else if (started) cmd("pauseVideo");
+      }),
+      { threshold: 0.6 }
+    ).observe(film);
+  }
+
   /* ---------- Highlight current city tab ---------- */
   const tabLinks = Array.from(tabs.querySelectorAll("a"));
   const cityIo = new IntersectionObserver(
