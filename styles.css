@@ -364,3 +364,19 @@ a { color: inherit; }
 .drop-gallery { align-items: start; }
 .drop-gallery figure { background: none; }
 .drop-gallery img { border-radius: 4px; }
+/* ---------- See → Recognise → Know where to report → Act ---------- */
+.steps { gap: 6px; align-items: stretch; }
+.steps span {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  min-height: 96px; padding: 14px 34px 14px 40px;
+  font-size: clamp(20px, 2.2vw, 30px); line-height: 1.05; letter-spacing: 0.02em;
+}
+.steps span:first-child { padding-left: 24px; }
+@media (max-width: 700px) {
+  .steps { grid-template-columns: 1fr; gap: 4px; }
+  .steps span, .steps span:first-child {
+    min-height: 64px; padding: 22px 16px 30px;
+    clip-path: polygon(0 0, 50% 14px, 100% 0, 100% calc(100% - 14px), 50% 100%, 0 calc(100% - 14px));
+  }
+  .steps span:first-child { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), 50% 100%, 0 calc(100% - 14px)); padding-top: 14px; }
+}
