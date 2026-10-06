@@ -380,3 +380,17 @@ a { color: inherit; }
   }
   .steps span:first-child { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), 50% 100%, 0 calc(100% - 14px)); padding-top: 14px; }
 }
+
+/* ---------- No black borders on images ---------- */
+/* Ambassadors: transparent cut-outs on a light grey card, as in the report */
+.amb { background: #ececec; }
+.amb img { background: transparent; aspect-ratio: 700 / 671; object-fit: contain; object-position: center bottom; }
+/* City photos: frame hugs the photo, no letterbox */
+.city-media { background: none; justify-self: center; width: fit-content; max-width: 100%; }
+.city-media img { width: auto; max-width: 100%; max-height: calc(100vh - 170px); object-fit: initial; }
+@media (max-width: 860px) { .city-media { justify-self: stretch; width: auto; } .city-media img { width: 100%; max-height: none; } }
+/* Innovation cards: show photos at their own shape */
+.innov-card > img { height: auto; object-fit: initial; background: none; }
+.ruth { height: 300px; }
+.city-caption { background: none; color: #555; padding: 8px 0 0; }
+.city-country { top: 0; bottom: auto; }
