@@ -12,33 +12,36 @@
       ? `<ul class="city-stats">${stats.map(([v, l, o]) => `<li><b data-count="${v}"${attrs(o)}>0</b><span>${l}</span></li>`).join("")}</ul>`
       : "";
   const galleryHTML = (g) =>
-    g && g.length ? `<div class="drop-gallery">${g.map(([src, alt]) => `<figure><img src="${src}" alt="${alt}" loading="lazy"><figcaption>${alt}</figcaption></figure>`).join("")}</div>` : "";
+    g && g.length ? `<div class="drop-gallery">${g.map(([src, alt]) => `<figure><img src="${src}" alt="${alt}" loading="lazy"></figure>`).join("")}</div>` : "";
   const quoteHTML = (q) => (q ? `<blockquote class="city-quote">“${q[0]}”<cite>${q[1]}</cite></blockquote>` : "");
+  // "## Heading" strings become sub-headings; everything else is a paragraph
+  const parasHTML = (arr, cls = "") =>
+    (arr || []).map((p) => (p.startsWith("## ") ? `<h5 class="${cls}">${p.slice(3)}</h5>` : `<p class="${cls}">${p}</p>`)).join("");
   function dropsHTML(c) {
-    const m = (window.CITY_MORE || {})[c.id];
-    if (!m) return "";
     let out = "";
-    if (m.spotlight) {
-      const s = m.spotlight;
+    if (c.spotlight) {
+      const s = c.spotlight;
       out += `<details class="drop spotlight reveal"><summary><span class="drop-label">Partner spotlight</span><span class="drop-title">${s.name}</span><span class="drop-icon" aria-hidden="true"></span></summary>
         <div class="drop-body">
           <h4>${s.title}</h4>
           ${s.img ? `<img class="drop-hero" src="${s.img[0]}" alt="${s.img[1]}" loading="lazy">` : ""}
           <p class="drop-intro">${s.intro}</p>
           ${statsHTML(s.stats)}
-          ${s.body.map((p) => `<p>${p}</p>`).join("")}
+          ${parasHTML(s.body)}
           ${s.list ? `<ol class="drop-list">${s.list.map((x) => `<li>${x}</li>`).join("")}</ol>` : ""}
           ${quoteHTML(s.quote)}
           ${s.closing ? `<p class="drop-closing">${s.closing}</p>` : ""}
         </div></details>`;
     }
-    out += `<details class="drop reveal"><summary><span class="drop-label">Read more</span><span class="drop-title">The full ${c.name} story</span><span class="drop-icon" aria-hidden="true"></span></summary>
+    if (c.more || c.closing) {
+      out += `<details class="drop reveal"><summary><span class="drop-label">Read more</span><span class="drop-title">${c.name}</span><span class="drop-icon" aria-hidden="true"></span></summary>
       <div class="drop-body">
-        ${galleryHTML(m.gallery)}
-        ${statsHTML(m.stats)}
-        ${(m.more || []).map((p) => `<p>${p}</p>`).join("")}
-        ${m.closing ? `<p class="drop-closing">${m.closing}</p>` : ""}
+        ${galleryHTML(c.gallery)}
+        ${statsHTML(c.moreStats)}
+        ${parasHTML(c.more)}
+        ${c.closing ? `<p class="drop-closing">${c.closing}</p>` : ""}
       </div></details>`;
+    }
     return out;
   }
 
@@ -53,19 +56,19 @@
     sec.className = "city" + (i % 2 ? " flip" : "");
     sec.id = c.id;
     sec.innerHTML = `
-      <div class="city-media reveal"><img src="${c.img}" alt="${c.alt}" loading="lazy"><span class="city-country">${c.country}</span></div>
+      <div class="city-media reveal"><img src="${c.img}" alt="${c.alt}" loading="lazy"><span class="city-country">${c.country}</span>${c.caption ? `<p class="city-caption">${c.caption}</p>` : ""}</div>
       <div class="city-body">
         <p class="kicker reveal">${String(i + 1).padStart(2, "0")} · ${c.country}</p>
         <h3 class="city-name reveal">${c.name}</h3>
-        <p class="city-tag reveal">${c.tagline}</p>
+        ${c.tagline ? `<p class="city-tag reveal">${c.tagline}</p>` : ""}
+        ${c.lede ? `<p class="city-lede reveal">${c.lede}</p>` : ""}
         <div class="city-head reveal"><span class="num" data-count="${hv}"${attrs({ decimals: hd, suffix: hs })}>0</span><span>${hl}</span></div>
         ${c.shift ? `<div class="shift reveal"><span>${c.shift[0]}</span><i>→</i><span class="pink">${c.shift[1]}</span><p>${c.shift[2]}</p></div>` : ""}
         <ul class="city-stats">${c.stats
           .map(([v, l, o]) => `<li class="reveal"><b data-count="${v}"${attrs(o)}>0</b><span>${l}</span></li>`)
           .join("")}</ul>
-        ${c.body.map((p) => `<p class="reveal">${p}</p>`).join("")}
-        ${c.quote ? `<blockquote class="city-quote reveal">“${c.quote[0]}”<cite>${c.quote[1]}</cite></blockquote>` : ""}
-        <p class="eco reveal"><strong>Wider response:</strong> ${c.ecosystem} <em>These outcomes cannot be attributed directly to It's a Penalty.</em></p>
+        ${parasHTML(c.body, "reveal")}
+        <div class="eco reveal"><strong>${c.ecoLabel || "Wider coordinated response"}</strong><p>${c.ecosystem}</p></div>
         ${dropsHTML(c)}
       </div>`;
     list.appendChild(sec);

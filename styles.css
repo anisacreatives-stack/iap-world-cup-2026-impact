@@ -329,3 +329,14 @@ a { color: inherit; }
 .drop .drop-body.in .loadbar i { transform: scaleX(1); }
 .drop .static-num { opacity: 0; }
 .drop .drop-body.in .static-num { opacity: 1; transform: none; }
+.city-lede { font-weight: 700; font-size: 18px; border-left: 4px solid var(--pink); padding-left: 14px; margin: 0 0 22px; }
+.city-body h5, .drop-body h5 { font-family: var(--display); font-weight: 400; font-size: 28px; line-height: 1; margin: 22px 0 10px; color: var(--pink); }
+.city-caption { margin: 0; padding: 10px 12px; font-size: 14px; font-style: italic; color: rgba(255,255,255,0.85); background: #000; }
+.eco strong { display: block; font-family: var(--display); font-weight: 400; font-size: 20px; letter-spacing: 0.02em; margin-bottom: 4px; }
+.eco p { margin: 0; }
+.eco { display: block; }
+.from-reach { max-width: 860px; margin: 56px auto 0; }
+.from-reach p { margin: 0 0 16px; }
+.dark .from-reach p { color: rgba(255,255,255,0.86); }
+.footer h5 { font-family: var(--display); font-weight: 400; font-size: 22px; color: var(--white); margin: 22px 0 6px; }
+.innov-card p + p { margin-top: -4px; }
