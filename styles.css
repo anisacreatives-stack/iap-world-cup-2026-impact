@@ -119,8 +119,6 @@ a { color: inherit; }
 .stat { padding: 28px 24px 32px 0; border-bottom: 1px solid var(--line-dark); }
 .dark .stat { border-color: var(--line); }
 .stat .num { display: block; font-family: var(--display); font-size: clamp(48px, 5.4vw, 76px); line-height: 1; letter-spacing: 0.01em; }
-.stat .num::after { content: ""; display: block; width: 0; height: 4px; background: var(--pink); margin: 12px 0 14px; transition: width 1s var(--ease) 0.3s; }
-.stat.in .num::after { width: 56px; }
 .stat .label { display: block; font-size: 16px; max-width: 260px; color: inherit; opacity: 0.85; }
 @media (max-width: 960px) { .stat-grid, .stat-grid.three { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .stat-grid, .stat-grid.three { grid-template-columns: 1fr; } }
@@ -150,7 +148,7 @@ a { color: inherit; }
 /* ---------- Ambassadors ---------- */
 .ambassadors { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .amb { margin: 0; background: #e9e7e4; overflow: hidden; border-radius: 4px; }
-.amb img { width: 100%; aspect-ratio: 1; object-fit: cover; object-position: top; filter: grayscale(1); transform: scale(1.04); transition: filter 0.6s, transform 0.8s var(--ease); }
+.amb img { width: 100%; height: auto; background: #000; filter: grayscale(1); transform: scale(1.04); transition: filter 0.6s, transform 0.8s var(--ease); }
 .amb:hover img, .amb.in:hover img { filter: none; transform: scale(1.08); }
 .amb.in img { filter: grayscale(0.15); transform: none; }
 .amb figcaption { font-family: var(--display); font-size: 28px; padding: 14px 16px 16px; line-height: 1; }
@@ -181,9 +179,9 @@ a { color: inherit; }
 
 .city { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px); max-width: 1180px; margin: 0 auto; padding: clamp(64px, 8vw, 110px) 24px; border-top: 1px solid var(--line-dark); }
 .city.flip .city-media { order: 2; }
-.city-media { position: sticky; top: 140px; align-self: start; overflow: hidden; border-radius: 4px; }
-.city-media img { width: 100%; max-height: 72vh; object-fit: cover; transform: scale(1.1); transition: transform 1.8s var(--ease); }
-.city-media.in img { transform: none; }
+.city-media { position: sticky; top: 140px; align-self: start; overflow: hidden; border-radius: 4px; background: #000; }
+.city-media img { width: 100%; height: auto; max-height: calc(100vh - 170px); object-fit: contain; margin: 0 auto; transform: scale(1.03); opacity: 0.6; transition: transform 1.6s var(--ease), opacity 1.2s ease; }
+.city-media.in img { transform: none; opacity: 1; }
 .city-country { position: absolute; left: 0; bottom: 0; background: var(--pink); color: var(--white); font-family: var(--display); font-size: 20px; padding: 6px 14px; }
 .city-name { font-family: var(--display); font-weight: 400; font-size: clamp(52px, 7vw, 96px); line-height: 0.9; margin: 0 0 10px; }
 .city-tag { font-weight: 700; font-size: 20px; margin: 0 0 24px; }
@@ -214,7 +212,7 @@ a { color: inherit; }
 /* ---------- Innovation ---------- */
 .innov { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .innov-card { background: #171717; padding: 0 0 26px; border-radius: 4px; overflow: hidden; }
-.innov-card > img, .ruth { width: 100%; height: 240px; object-fit: cover; }
+.innov-card > img, .ruth { width: 100%; height: 300px; object-fit: contain; background: #0e0e0e; }
 .ruth { display: grid; place-items: center; background: radial-gradient(circle at 30% 30%, var(--pink), #5a1236 70%); }
 .ruth span { font-family: var(--display); font-size: 72px; }
 .innov-card .idx, .innov-card h3, .innov-card p, .innov-card ul { margin-left: 24px; margin-right: 24px; }
@@ -283,4 +281,15 @@ a { color: inherit; }
   .hero-title .line > span { transform: none !important; }
   .finale-text .w { opacity: 1; }
 }
-@media (min-width: 861px) { .city-media img { aspect-ratio: 4 / 5; height: auto; } }
+
+/* ---------- Loading bars under numbers ---------- */
+.loadbar { display: block; height: 5px; margin: 12px 0 14px; background: rgba(0,0,0,0.09); border-radius: 3px; overflow: hidden; }
+.dark .loadbar, .callout .loadbar { background: rgba(255,255,255,0.12); }
+.loadbar i { display: block; height: 100%; width: calc(var(--fill, 100) * 1%); background: var(--pink); border-radius: 3px; transform: scaleX(0); transform-origin: 0 50%; transition: transform 1.5s var(--ease); transition-delay: calc(var(--delay, 0ms) + 150ms); }
+.in .loadbar i, .in.loadbar i { transform: scaleX(1); }
+.city-stats .loadbar { height: 4px; margin: 8px 0 6px; }
+.learn .loadbar { grid-column: 1 / -1; margin: 0 0 4px; }
+.callout-stat .loadbar { margin: 10px 0 8px; }
+.static-num { opacity: 0; transform: translateY(8px); transition: opacity 0.6s ease, transform 0.6s var(--ease); transition-delay: calc(var(--delay, 0ms) + 900ms); }
+.in .static-num, .static-num.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .loadbar i { transform: none !important; } .static-num { opacity: 1 !important; transform: none !important; } }

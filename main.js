@@ -55,6 +55,27 @@
     })(t0);
   }
 
+  /* ---------- Most numbers: show the figure, with a loading bar underneath ---------- */
+  // Only the big headline figures (hero, city headlines, survey rings) still count up.
+  document.querySelectorAll("[data-count]").forEach((el) => {
+    if (el.closest(".hero-stat, .city-head, .ring")) return;
+    const d = parseInt(el.dataset.decimals || "0", 10);
+    const suf = el.dataset.suffix || "";
+    const val = parseFloat(el.dataset.count);
+    el.textContent = (el.dataset.prefix || "") + fmt(val, d) + suf;
+    el.dataset.done = 1;
+    el.classList.add("static-num");
+    if (el.closest(".stat, .city-stats, .learn, .callout-stat")) {
+      const bar = document.createElement("span");
+      bar.className = "loadbar";
+      // Percentages fill to their value; everything else loads to full.
+      const fill = suf.trim().startsWith("%") ? Math.min(100, val) : 100;
+      bar.innerHTML = `<i style="--fill:${fill}"></i>`;
+      if (el.closest(".learn")) el.closest(".learn").appendChild(bar);
+      else el.insertAdjacentElement("afterend", bar);
+    }
+  });
+
   /* ---------- Reveal on scroll ---------- */
   const io = new IntersectionObserver(
     (entries) => {
