@@ -448,7 +448,7 @@ window.CITIES = [
     ],
     ecoLabel: "Building connections beyond the campaign",
     ecosystem: "Importantly, this network continued beyond the campaign period. Its second phase grew to approximately 47 organisations and 108 members across Vancouver and Toronto, examining what changed during the summer, where gaps remained and what should inform responses to future major events.",
-    gallery: [["img/vancouver-team.jpg", "Vancouver partners"], ["img/vancouver-launch.jpg", "Host City Connections partners"]],
+    gallery: [["img/vancouver-team-v2.jpg", "Vancouver partners"], ["img/vancouver-launch.jpg", "Host City Connections partners"]],
     moreStats: [
       [400, "bathroom stickers in English"],
       [250, "bathroom stickers in French"],
