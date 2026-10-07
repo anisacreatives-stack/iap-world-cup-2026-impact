@@ -70,7 +70,7 @@
         <h3 class="city-name reveal">${c.name}</h3>
         ${c.tagline ? `<p class="city-tag reveal">${c.tagline}</p>` : ""}
         ${c.lede ? `<p class="city-lede reveal">${c.lede}</p>` : ""}
-        ${partnersHTML(c.id)}
+        ${c.id === "mexico" ? "" : partnersHTML(c.id)}
         <div class="city-head reveal"><span class="num" data-count="${hv}"${attrs({ decimals: hd, suffix: hs })}>0</span><span>${hl}</span></div>
         ${c.shift ? `<div class="shift reveal"><span>${c.shift[0]}</span><i>→</i><span class="pink">${c.shift[1]}</span><p>${c.shift[2]}</p></div>` : ""}
         <ul class="city-stats">${c.stats
@@ -81,6 +81,17 @@
         ${dropsHTML(c)}
       </div>`;
     list.appendChild(sec);
+    if (c.id === "mexico" && (window.CITY_PARTNERS || {}).mexico) {
+      const logos = window.CITY_PARTNERS.mexico
+        .map(([src, alt, w, h]) => `<img src="${src}" alt="${alt}" title="${alt}" width="${w}" height="${h}" loading="lazy"${h / w > 0.8 ? ' class="tall"' : ""}>`)
+        .join("");
+      const band = document.createElement("div");
+      band.className = "city-marquee";
+      band.setAttribute("role", "region");
+      band.setAttribute("aria-label", "Partners across Mexico");
+      band.innerHTML = `<p class="city-marquee-label">Partners across Mexico</p><div class="city-marquee-window"><div class="city-marquee-track">${logos}${logos.replace(/<img /g, '<img aria-hidden="true" ')}</div></div>`;
+      sec.prepend(band);
+    }
   });
 
   /* ---------- Count-up numbers ---------- */
