@@ -436,3 +436,39 @@ a { color: inherit; }
 .city-marquee:hover .city-marquee-track { animation-play-state: paused; }
 @media (max-width: 700px) { .city-marquee-track img { height: 34px; margin: 0 22px; } .city-marquee-track img.tall { height: 48px; } }
 @media (prefers-reduced-motion: reduce) { .city-marquee-track { flex-wrap: wrap; width: auto; justify-content: center; gap: 16px 0; } .city-marquee-track img[aria-hidden] { display: none; } }
+/* ---------- Partner drop-downs (dark) ---------- */
+.pgroup { margin-top: 56px; }
+.pgroup:first-child { margin-top: 0; }
+.pdrop { border-top: 1px solid var(--line); }
+.pgroup .pdrop:last-child { border-bottom: 1px solid var(--line); }
+.pdrop summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 200px 1fr 40px; gap: 28px; align-items: center; padding: 22px 0; }
+.pdrop summary::-webkit-details-marker { display: none; }
+.pdrop-logo { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.pdrop-logo img { max-width: 170px; max-height: 56px; width: auto; height: auto; }
+.pdrop-text { display: flex; flex-direction: column; }
+.pdrop-name { font-family: var(--display); font-size: 20px; letter-spacing: 0.03em; color: var(--pink); }
+.pdrop-head { font-family: var(--display); font-size: clamp(26px, 2.8vw, 38px); line-height: 1; color: var(--white); transition: color 0.25s; }
+.pdrop summary:hover .pdrop-head { color: var(--pink-soft); }
+.pdrop .drop-icon { background: rgba(255,255,255,0.12); }
+.pdrop[open] .drop-icon { transform: rotate(180deg); background: var(--pink); }
+.pdrop[open] .drop-icon::after { transform: rotate(0deg); }
+.pdrop-body { padding: 0 0 26px calc(200px + 28px); max-width: 920px; animation: pdrop-in 0.5s var(--ease); }
+.pdrop-body p { margin: 0 0 12px; color: rgba(255,255,255,0.85); font-size: 17px; }
+.pdrop-body strong { color: var(--white); }
+@keyframes pdrop-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+@media (max-width: 700px) {
+  .pdrop summary { grid-template-columns: 1fr 34px; gap: 12px; }
+  .pdrop-logo { align-items: flex-start; flex-direction: row; }
+  .pdrop-logo img { max-height: 40px; }
+  .pdrop-body { padding-left: 0; }
+}
+/* explicit layout for partner drop-downs (fixes mobile overlap) */
+.pdrop summary { grid-template-areas: "logo text icon"; }
+.pdrop-logo { grid-area: logo; }
+.pdrop-text { grid-area: text; min-width: 0; }
+.pdrop .drop-icon { grid-area: icon; justify-self: end; }
+@media (max-width: 700px) {
+  .pdrop summary { grid-template-columns: 1fr 34px; grid-template-areas: "logo icon" "text text"; gap: 10px 12px; padding: 18px 0; }
+  .pdrop-logo { flex-direction: row; align-items: center; justify-content: flex-start; }
+  .pdrop-head { font-size: 26px; }
+}
