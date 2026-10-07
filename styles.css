@@ -647,3 +647,16 @@ html.modal-open, html.modal-open body { overflow: hidden; }
   .map-pin .dot::before { animation-duration: 3s; }
   .map-hint { font-size: 16px; }
 }
+/* Previous / Next at the bottom of each city page */
+.city-modal-foot { max-width: 1180px; margin: 0 auto; padding: 8px 24px 64px; display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid var(--line-dark); }
+.city-modal-foot button { display: flex; align-items: center; gap: 14px; background: none; border: 0; cursor: pointer; padding: 22px 0; color: var(--ink); text-align: left; font: inherit; }
+.city-modal-foot .cmf-next { margin-left: auto; text-align: right; }
+.city-modal-foot span { display: flex; flex-direction: column; }
+.city-modal-foot small { font-family: var(--display); font-size: 16px; letter-spacing: 0.06em; color: var(--pink); }
+.city-modal-foot b { font-family: var(--display); font-weight: 400; font-size: clamp(30px, 4vw, 52px); line-height: 1; }
+.city-modal-foot i { font-style: normal; display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; background: var(--ink); color: var(--white); font-size: 24px; transition: background 0.25s, transform 0.3s var(--ease); }
+.city-modal-foot .cmf-next:hover i { background: var(--pink); transform: translateX(6px); }
+.city-modal-foot .cmf-prev:hover i { background: var(--pink); transform: translateX(-6px); }
+.city-modal-foot button:hover b { color: var(--pink); }
+.city-modal-foot button[hidden] { display: none; }
+@media (max-width: 600px) { .city-modal-foot i { width: 44px; height: 44px; font-size: 20px; } .city-modal-foot .cmf-prev span { display: none; } }

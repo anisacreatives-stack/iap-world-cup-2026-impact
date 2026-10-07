@@ -86,6 +86,11 @@
   document.body.appendChild(modal);
   const scroller = modal.querySelector(".city-modal-scroll");
   scroller.appendChild(list);
+  const foot = document.createElement("div");
+  foot.className = "city-modal-foot";
+  foot.innerHTML = `<button class="cmf-prev" type="button"><i aria-hidden="true">←</i><span><small>Previous</small><b></b></span></button>
+    <button class="cmf-next" type="button"><span><small>Next</small><b></b></span><i aria-hidden="true">→</i></button>`;
+  scroller.appendChild(foot);
   const articles = Array.from(list.querySelectorAll(".city"));
   // Mexico's partner banner is prepended inside its article already.
   let current = -1;
@@ -95,6 +100,11 @@
     current = i;
     articles.forEach((a, k) => (a.hidden = k !== i));
     modal.querySelector(".cm-title").textContent = cities[i].name;
+    const last = i === articles.length - 1;
+    foot.querySelector(".cmf-prev").hidden = i === 0;
+    if (i > 0) foot.querySelector(".cmf-prev b").textContent = cities[i - 1].name;
+    foot.querySelector(".cmf-next small").textContent = last ? "Next section" : "Next city";
+    foot.querySelector(".cmf-next b").textContent = last ? "Innovation in action" : cities[i + 1].name;
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
     document.documentElement.classList.add("modal-open");
@@ -132,6 +142,13 @@
     e.preventDefault();
     show(cities.findIndex((c) => "#" + c.id === a.getAttribute("href")), true);
   });
+  foot.querySelector(".cmf-prev").onclick = () => show(current - 1, true);
+  foot.querySelector(".cmf-next").onclick = () => {
+    if (current < articles.length - 1) return show(current + 1, true);
+    close(true);
+    const nxt = document.getElementById("innovation");
+    if (nxt) setTimeout(() => nxt.scrollIntoView({ behavior: "smooth" }), 60);
+  };
   modal.querySelector(".cm-back").onclick = () => close(true);
   modal.querySelector(".cm-close").onclick = () => close(true);
   modal.querySelector(".cm-prev").onclick = () => show((current - 1 + articles.length) % articles.length, true);
