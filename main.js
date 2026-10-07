@@ -17,12 +17,20 @@
   // "## Heading" strings become sub-headings; everything else is a paragraph
   const parasHTML = (arr, cls = "") =>
     (arr || []).map((p) => (p.startsWith("## ") ? `<h5 class="${cls}">${p.slice(3)}</h5>` : `<p class="${cls}">${p}</p>`)).join("");
+  const partnersHTML = (id) => {
+    const p = (window.CITY_PARTNERS || {})[id];
+    if (!p || !p.length) return "";
+    return `<div class="city-partners reveal"><p class="city-partners-label">${id === "mexico" ? "Partners across Mexico" : "Local partners"}</p><div class="city-partners-logos">${p
+      .map(([src, alt, w, h]) => `<img src="${src}" alt="${alt}" title="${alt}" width="${w}" height="${h}" loading="lazy"${h / w > 0.8 ? ' class="tall"' : ""}>`)
+      .join("")}</div></div>`;
+  };
   function dropsHTML(c) {
     let out = "";
     if (c.spotlight) {
       const s = c.spotlight;
       out += `<details class="drop spotlight reveal"><summary><span class="drop-label">Partner spotlight</span><span class="drop-title">${s.name}</span><span class="drop-icon" aria-hidden="true"></span></summary>
         <div class="drop-body">
+          ${(window.SPOTLIGHT_LOGOS || {})[c.id] ? `<div class="spot-logo"><img src="${window.SPOTLIGHT_LOGOS[c.id][0]}" alt="${window.SPOTLIGHT_LOGOS[c.id][1]}" loading="lazy"></div>` : ""}
           <h4>${s.title}</h4>
           ${s.img ? `<img class="drop-hero" src="${s.img[0]}" alt="${s.img[1]}" loading="lazy">` : ""}
           <p class="drop-intro">${s.intro}</p>
@@ -62,6 +70,7 @@
         <h3 class="city-name reveal">${c.name}</h3>
         ${c.tagline ? `<p class="city-tag reveal">${c.tagline}</p>` : ""}
         ${c.lede ? `<p class="city-lede reveal">${c.lede}</p>` : ""}
+        ${partnersHTML(c.id)}
         <div class="city-head reveal"><span class="num" data-count="${hv}"${attrs({ decimals: hd, suffix: hs })}>0</span><span>${hl}</span></div>
         ${c.shift ? `<div class="shift reveal"><span>${c.shift[0]}</span><i>→</i><span class="pink">${c.shift[1]}</span><p>${c.shift[2]}</p></div>` : ""}
         <ul class="city-stats">${c.stats
