@@ -472,3 +472,50 @@ a { color: inherit; }
   .pdrop-logo { flex-direction: row; align-items: center; justify-content: flex-start; }
   .pdrop-head { font-size: 26px; }
 }
+
+/* ---------- Partner drop-downs as a compact grid ---------- */
+.pgrid-wrap { max-width: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px 20px; align-items: start; }
+.pgroup { margin-top: 0; min-width: 0; }
+.pgroup.g4 { grid-column: span 4; }
+.pgroup.g3 { grid-column: span 3; }
+.pgroup.g2 { grid-column: span 2; }
+.pgroup.g1 { grid-column: span 1; }
+.pgroup .thanks-title { font-size: clamp(24px, 2.4vw, 32px); gap: 16px; margin-bottom: 16px; white-space: nowrap; }
+.pgrid { display: grid; gap: 20px; align-items: start; }
+.g4 .pgrid { grid-template-columns: repeat(4, 1fr); }
+.g3 .pgrid { grid-template-columns: repeat(3, 1fr); }
+.g2 .pgrid { grid-template-columns: repeat(2, 1fr); }
+.g1 .pgrid { grid-template-columns: 1fr; }
+.pgrid .pdrop { border: 1px solid var(--line); border-radius: 10px; background: #141414; transition: border-color 0.3s, background 0.3s; }
+.pgrid .pdrop:hover, .pgrid .pdrop[open] { border-color: rgba(224,64,138,0.6); background: #181818; }
+.pgroup .pgrid .pdrop:last-child { border-bottom: 1px solid var(--line); }
+.pgrid .pdrop summary { display: flex; flex-direction: column; align-items: flex-start; gap: 0; padding: 20px 20px 18px; position: relative; grid-template-columns: none; grid-template-areas: none; }
+.pgrid .pdrop-logo { flex-direction: row; justify-content: flex-start; align-items: center; height: 56px; margin-bottom: 16px; gap: 12px; }
+.pgrid .pdrop-logo img { max-height: 46px; max-width: 150px; }
+.pgrid .pdrop-name { font-size: 17px; }
+.pgrid .pdrop-head { font-size: clamp(22px, 1.9vw, 26px); line-height: 1.05; padding-right: 30px; }
+.pgrid .pdrop .drop-icon { position: absolute; top: 18px; right: 16px; width: 30px; height: 30px; }
+.pgrid .pdrop-body { padding: 0 20px 20px; max-width: none; }
+.pgrid .pdrop-body p { font-size: 15.5px; }
+@media (max-width: 1100px) {
+  .pgrid-wrap { grid-template-columns: repeat(2, 1fr); }
+  .pgroup.g4, .pgroup.g3, .pgroup.g2 { grid-column: span 2; }
+  .pgroup.g1 { grid-column: span 1; }
+  .g4 .pgrid, .g3 .pgrid, .g2 .pgrid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .pgrid-wrap { grid-template-columns: 1fr; gap: 36px; }
+  .pgroup.g4, .pgroup.g3, .pgroup.g2, .pgroup.g1 { grid-column: auto; }
+  .g4 .pgrid, .g3 .pgrid, .g2 .pgrid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .pgrid .pdrop summary { padding: 14px 14px 14px; }
+  .pgrid .pdrop-logo { height: 40px; margin-bottom: 10px; }
+  .pgrid .pdrop-logo img { max-height: 32px; max-width: 110px; }
+  .pgrid .pdrop-head { font-size: 19px; padding-right: 0; }
+  .pgrid .pdrop .drop-icon { top: 12px; right: 10px; width: 26px; height: 26px; }
+  .pgrid .pdrop[open] { grid-column: 1 / -1; }
+}
+.pgroup .thanks-title { white-space: normal; }
+.pgroup.g1 .thanks-title { font-size: clamp(22px, 1.9vw, 28px); }
+.pgroup .thanks-title::after { min-width: 24px; }
+.pgroup .thanks-title span { white-space: nowrap; }
+.pgroup .thanks-title::after { min-width: 0; }
