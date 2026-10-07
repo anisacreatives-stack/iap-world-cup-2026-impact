@@ -534,3 +534,7 @@ a { color: inherit; }
 
 .element { border-top: 0; padding-top: 22px; }
 .element::before { left: 14px; right: 14px; top: 0; }
+/* Steven Caldwell acknowledgement */
+.influencer { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 32px; }
+.influencer img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 3px solid var(--pink); }
+.influencer .caption-center { margin-top: 0; }
