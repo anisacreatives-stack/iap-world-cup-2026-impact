@@ -538,3 +538,7 @@ a { color: inherit; }
 .influencer { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 32px; }
 .influencer img { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 3px solid var(--pink); }
 .influencer .caption-center { margin-top: 0; }
+/* Ruth AI card: illustration on the pink gradient */
+.ruth { position: relative; display: flex; align-items: flex-end; justify-content: center; overflow: hidden; height: 300px; }
+.ruth img { height: 92%; width: auto; position: relative; z-index: 1; filter: drop-shadow(0 10px 24px rgba(0,0,0,0.35)); }
+.ruth span { position: absolute; left: 18px; top: 14px; font-size: 34px; z-index: 2; letter-spacing: 0.02em; }
