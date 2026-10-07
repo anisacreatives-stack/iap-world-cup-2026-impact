@@ -545,3 +545,13 @@ a { color: inherit; }
 /* Bigger campaign film, more breathing room before Steven Caldwell */
 .film { max-width: 860px; }
 .influencer { margin-top: 72px; }
+/* Closing quote with photo */
+.finale-grid { display: grid; grid-template-columns: minmax(260px, 0.8fr) 1.4fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+.finale-photo { margin: 0; border-radius: 8px; overflow: hidden; position: relative; }
+.finale-photo img { width: 100%; height: auto; display: block; transform: scale(1.06); transition: transform 1.8s var(--ease); }
+.finale-photo.in img { transform: none; }
+.finale-photo::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: var(--pink); }
+.finale-grid .finale-text { font-size: clamp(36px, 4.6vw, 72px); }
+@media (max-width: 860px) { .finale-grid { grid-template-columns: 1fr; } .finale-photo { max-width: 420px; } }
+.finale-cite { flex-wrap: wrap; row-gap: 4px; }
+.finale-name, .finale-role { white-space: nowrap; }
