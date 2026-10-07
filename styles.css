@@ -532,9 +532,5 @@ a { color: inherit; }
   .element:hover p { color: rgba(255,255,255,0.96); }
 }
 
-/* ---------- Football cursor ---------- */
-html, body { cursor: url("img/cursor/ball.svg") 14 14, url("img/cursor/ball.png") 14 14, auto; }
-a, button, summary, [role="button"], .pdrop summary, .drop summary, .city-tabs a, .film-frame { cursor: url("img/cursor/ball-pink.svg") 16 16, url("img/cursor/ball-pink.png") 16 16, pointer; }
-input, textarea { cursor: text; }
 .element { border-top: 0; padding-top: 22px; }
 .element::before { left: 14px; right: 14px; top: 0; }
