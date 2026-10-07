@@ -422,3 +422,7 @@ a { color: inherit; }
 .spot-logo { display: inline-flex; background: #161616; border-radius: 6px; padding: 12px 16px; margin: 16px 0 0; }
 .spot-logo img { height: 56px; width: auto; max-width: 220px; }
 @media (max-width: 480px) { .city-partners-logos img { height: 32px; } .city-partners-logos img.tall { height: 46px; } }
+.finale-cite { display: flex; align-items: center; gap: 14px; margin: 40px 0 0; }
+.finale-cite::before { content: ""; width: 48px; height: 4px; background: var(--pink); }
+.finale-name { font-family: var(--display); font-size: clamp(26px, 2.6vw, 34px); letter-spacing: 0.02em; }
+.finale-role { font-size: 16px; color: rgba(255,255,255,0.7); }
