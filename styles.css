@@ -555,3 +555,13 @@ a { color: inherit; }
 @media (max-width: 860px) { .finale-grid { grid-template-columns: 1fr; } .finale-photo { max-width: 420px; } }
 .finale-cite { flex-wrap: wrap; row-gap: 4px; }
 .finale-name, .finale-role { white-space: nowrap; }
+/* ---------- Safeguarding outcomes grouped with their caveat ---------- */
+.safeguard { grid-column: span 3; background: #e9e6e2; border-radius: 10px; border-top: 4px solid #8a8a8a; padding: 18px 26px 22px; margin: 18px 0 18px 12px; }
+.safeguard-label { font-family: var(--display); font-size: 18px; letter-spacing: 0.06em; color: #555; margin: 0 0 4px; }
+.safeguard-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+.safeguard .stat { border-bottom: 0; padding: 14px 0 10px; }
+.safeguard .stat .label { max-width: none; }
+.safeguard .loadbar i { background: #8a8a8a; }
+.safeguard-note { font-size: 14px; color: #555; margin: 8px 0 0; padding-top: 12px; border-top: 1px solid rgba(0,0,0,0.12); }
+@media (max-width: 960px) { .safeguard { grid-column: 1 / -1; margin-left: 0; } }
+@media (max-width: 520px) { .safeguard-stats { grid-template-columns: 1fr; } .safeguard { padding: 16px 18px 18px; } }
