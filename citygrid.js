@@ -19,7 +19,7 @@
   grid.innerHTML = cities
     .map((c) => {
       const [hv, hs, hd, hl] = c.headline;
-      return `<a class="city-box reveal" href="#${c.id}" aria-label="Open ${c.name}">
+      return `<a class="city-box" href="#${c.id}" aria-label="Open ${c.name}">
         <img src="${c.img}" alt="" loading="lazy">
         <span class="city-box-shade"></span>
         <span class="city-box-country">${c.country}</span>
@@ -32,6 +32,13 @@
     })
     .join("");
   list.before(grid);
+  // fade the boxes in as they scroll into view
+  const boxes = grid.querySelectorAll(".city-box");
+  boxes.forEach((bx, k) => bx.style.setProperty("--d", (k % 4) * 70 + "ms"));
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((es) => es.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("shown"); io.unobserve(en.target); } }), { threshold: 0.1 });
+    boxes.forEach((bx) => io.observe(bx));
+  } else boxes.forEach((bx) => bx.classList.add("shown"));
 
   /* ---- city "page" overlay ---- */
   const modal = document.createElement("div");
