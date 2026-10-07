@@ -605,3 +605,45 @@ html.modal-open, html.modal-open body { overflow: hidden; }
 .city-box { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease var(--d, 0ms), transform 0.8s var(--ease) var(--d, 0ms); }
 .city-box.shown { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .city-box { opacity: 1; transform: none; } }
+
+/* ================= Optional big clickable map (?cities=map) ================= */
+.cities-map #cities { background: var(--black); color: var(--white); }
+.cities-map #cities .lede { color: rgba(255,255,255,0.85); }
+.city-map-wrap { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+.map-hint { font-family: var(--display); font-size: 20px; letter-spacing: 0.05em; color: var(--pink); text-align: center; margin: 0 0 10px; }
+.city-map { position: relative; }
+.city-map > img { width: 100%; height: auto; display: block; }
+.map-pin { position: absolute; left: calc(var(--x) * 1%); top: calc(var(--y) * 1%); width: 0; height: 0; z-index: 2; color: var(--white); text-decoration: none; }
+.map-pin .dot { position: absolute; left: -22px; top: -22px; width: 44px; height: 44px; border-radius: 50%; }
+.map-pin .dot::before { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--pink); animation: ping 2.4s var(--ease) infinite; }
+.map-pin:nth-child(3n) .dot::before { animation-delay: 0.6s; } .map-pin:nth-child(3n+1) .dot::before { animation-delay: 1.2s; }
+.map-pin .dot::after { content: ""; position: absolute; inset: 12px; border-radius: 50%; background: transparent; box-shadow: 0 0 0 0 rgba(224,64,138,0); transition: box-shadow 0.3s, background 0.3s; }
+.map-pin:hover .dot::after, .map-pin:focus-visible .dot::after, .map-pin.active .dot::after { background: var(--pink); box-shadow: 0 0 0 8px rgba(224,64,138,0.35), 0 0 30px 8px rgba(224,64,138,0.6); }
+.map-pin.pill { width: auto; height: auto; transform: translate(-50%, -50%); }
+.pill-label { display: inline-block; white-space: nowrap; font-family: var(--display); font-size: clamp(14px, 1.4vw, 20px); letter-spacing: 0.05em; padding: 6px 14px; border: 2px solid var(--pink); border-radius: 999px; background: rgba(11,11,11,0.75); transition: background 0.25s; }
+.map-pin.pill:hover .pill-label { background: var(--pink); }
+.map-tip { position: absolute; bottom: 30px; left: 50%; width: 250px; transform: translate(-50%, 8px); opacity: 0; pointer-events: none; transition: opacity 0.25s ease, transform 0.3s var(--ease); background: #161616; border: 1px solid rgba(224,64,138,0.6); border-radius: 10px; overflow: hidden; box-shadow: 0 18px 40px rgba(0,0,0,0.5); }
+.map-pin.pill .map-tip { bottom: 46px; }
+.map-pin.tip-up .map-tip { bottom: 30px; }
+.map-pin.tip-left .map-tip { left: auto; right: -20px; transform: translate(0, 8px); }
+.map-pin.tip-right .map-tip { left: -20px; transform: translate(0, 8px); }
+.map-pin:hover .map-tip, .map-pin:focus-visible .map-tip { opacity: 1; transform: translate(-50%, 0); }
+.map-pin.tip-left:hover .map-tip, .map-pin.tip-left:focus-visible .map-tip, .map-pin.tip-right:hover .map-tip, .map-pin.tip-right:focus-visible .map-tip { transform: none; }
+.map-tip img { width: 100%; height: 120px; object-fit: cover; display: block; }
+.map-tip-body { display: flex; flex-direction: column; gap: 4px; padding: 10px 12px 12px; font-size: 13px; line-height: 1.3; color: rgba(255,255,255,0.85); }
+.map-tip-body b { font-family: var(--display); font-weight: 400; font-size: 26px; color: var(--white); line-height: 1; }
+.map-tip-body em { font-style: normal; font-family: var(--display); font-size: 20px; color: var(--pink-soft); }
+.map-tip-body i { font-style: normal; font-family: var(--display); font-size: 16px; letter-spacing: 0.05em; color: var(--pink); }
+.map-list { display: none; }
+@media (hover: none), (max-width: 760px) {
+  .map-tip { display: none; }
+  .map-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
+  .map-list a { color: var(--white); text-decoration: none; font-weight: 700; font-size: 14px; padding: 7px 14px; border: 1.5px solid rgba(255,255,255,0.4); border-radius: 999px; }
+  .map-list a:hover { background: var(--pink); border-color: var(--pink); }
+}
+@media (max-width: 760px) { .map-pin .dot { left: -16px; top: -16px; width: 32px; height: 32px; } .map-pin .dot::after { inset: 8px; } .city-map-wrap { padding: 0 8px; } }
+@media (max-width: 760px) {
+  .pill-label { font-size: 11px; padding: 3px 8px; border-width: 1.5px; }
+  .map-pin .dot::before { animation-duration: 3s; }
+  .map-hint { font-size: 16px; }
+}

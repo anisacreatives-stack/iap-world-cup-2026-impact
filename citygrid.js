@@ -3,18 +3,47 @@
 // or for everyone by adding data-cities="grid" to the <html> tag.
 (function () {
   const params = new URLSearchParams(location.search);
-  const on = params.get("cities") === "grid" || document.documentElement.dataset.cities === "grid";
-  if (!on) return;
+  const mode = params.get("cities") || document.documentElement.dataset.cities || "";
+  if (mode !== "grid" && mode !== "map") return;
 
   const cities = window.CITIES || [];
   const list = document.getElementById("city-list");
   const section = document.getElementById("cities");
   if (!list || !section || !cities.length) return;
-  document.documentElement.classList.add("cities-grid");
+  document.documentElement.classList.add("cities-grid", "cities-" + mode);
 
   /* ---- grid of square boxes ---- */
   const fmt = (v, d) => Number(v).toLocaleString("en-GB", { minimumFractionDigits: d, maximumFractionDigits: d });
-  const grid = document.createElement("div");
+  // Pin positions (% across, % down) on img/map-big.png
+  const PINS = {
+    vancouver: [13.6, 13.6, "r"], boston: [84.1, 34.0, "r"], "new-york": [80.1, 38.4, "r"],
+    "kansas-city": [52.2, 42.8, "l"], "los-angeles": [20.2, 55.7, "l"], atlanta: [66.1, 56.5, "l"],
+    miami: [71.7, 75.3, "r"], monterrey: [44.5, 75.5, "l"], guadalajara: [40.4, 86.7, "l"], "mexico-city": [46.1, 89.4, "r"],
+    mexico: [31, 66, "pill"]
+  };
+  let grid;
+  if (mode === "map") {
+    grid = document.createElement("div");
+    grid.className = "city-map-wrap";
+    const pins = cities
+      .filter((c) => PINS[c.id])
+      .map((c) => {
+        const [x, y, side] = PINS[c.id];
+        const [hv, hs, hd, hl] = c.headline;
+        const cls = side === "pill" ? "map-pin pill" : "map-pin";
+        const label = c.id === "mexico" ? "Mexico · national campaign" : c.name;
+        return `<a class="${cls} tip-${x > 60 ? "left" : "right"} ${y > 70 ? "tip-up" : ""}" href="#${c.id}" style="--x:${x};--y:${y}" aria-label="Open ${c.name}">
+          ${side === "pill" ? `<span class="pill-label">${label} →</span>` : `<span class="dot"></span>`}
+          <span class="map-tip"><img src="${c.img}" alt="" loading="lazy"><span class="map-tip-body"><b>${c.name}</b><span><em>${fmt(hv, hd)}${hs}</em> ${hl}</span><i>Explore →</i></span></span>
+        </a>`;
+      })
+      .join("");
+    grid.innerHTML = `<p class="map-hint">Tap a city on the map to explore its story</p>
+      <div class="city-map"><img src="img/map-big.png" alt="Map of It’s a Penalty’s FIFA World Cup 2026 host cities across Canada, the United States and Mexico" width="2400" height="1588">${pins}</div>
+      <div class="map-list">${cities.map((c) => `<a href="#${c.id}">${c.name}</a>`).join("")}</div>`;
+    list.before(grid);
+  } else {
+    grid = document.createElement("div");
   grid.className = "wrap city-grid";
   grid.innerHTML = cities
     .map((c) => {
@@ -39,6 +68,8 @@
     const io = new IntersectionObserver((es) => es.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("shown"); io.unobserve(en.target); } }), { threshold: 0.1 });
     boxes.forEach((bx) => io.observe(bx));
   } else boxes.forEach((bx) => bx.classList.add("shown"));
+
+  }
 
   /* ---- city "page" overlay ---- */
   const modal = document.createElement("div");
@@ -96,7 +127,7 @@
   }
 
   grid.addEventListener("click", (e) => {
-    const a = e.target.closest("a.city-box");
+    const a = e.target.closest("a[href^='#']");
     if (!a) return;
     e.preventDefault();
     show(cities.findIndex((c) => "#" + c.id === a.getAttribute("href")), true);
