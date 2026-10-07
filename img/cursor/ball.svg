@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+<defs><clipPath id="b"><circle cx="14.0" cy="14.0" r="12.5"/></clipPath></defs>
+<circle cx="14.0" cy="14.0" r="12.5" fill="#fff"/>
+<g clip-path="url(#b)"><polygon points="14.00,9.75 18.04,12.69 16.50,17.44 11.50,17.44 9.96,12.69" fill="#111"/><polygon points="22.52,2.27 23.89,6.46 20.32,9.05 16.75,6.46 18.11,2.27" fill="#111"/><polygon points="27.79,18.48 24.22,21.07 20.66,18.48 22.02,14.29 26.43,14.29" fill="#111"/><polygon points="14.00,28.50 10.43,25.91 11.80,21.72 16.20,21.72 17.57,25.91" fill="#111"/><polygon points="0.21,18.48 1.57,14.29 5.98,14.29 7.34,18.48 3.78,21.07" fill="#111"/><polygon points="5.48,2.27 9.89,2.27 11.25,6.46 7.68,9.05 4.11,6.46" fill="#111"/></g>
+<circle cx="14.0" cy="14.0" r="12.5" fill="none" stroke="#111" stroke-width="1.6"/>
+</svg>

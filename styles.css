@@ -519,3 +519,22 @@ a { color: inherit; }
 .pgroup .thanks-title::after { min-width: 24px; }
 .pgroup .thanks-title span { white-space: nowrap; }
 .pgroup .thanks-title::after { min-width: 0; }
+
+/* ---------- Five elements: light up on hover ---------- */
+.element { position: relative; padding: 18px 14px 22px; margin: 0 -14px; border-radius: 0 0 10px 10px; transition: background 0.35s ease, transform 0.35s var(--ease), box-shadow 0.35s ease; }
+.element::before { content: ""; position: absolute; left: 0; right: 0; top: -4px; height: 4px; background: var(--pink); box-shadow: 0 0 0 rgba(224,64,138,0); transition: height 0.3s var(--ease), box-shadow 0.35s ease; }
+.element .idx, .element h3, .element p { transition: color 0.3s ease, text-shadow 0.35s ease; }
+@media (hover: hover) {
+  .element:hover { background: linear-gradient(180deg, rgba(224,64,138,0.16), rgba(224,64,138,0.04) 70%, transparent); transform: translateY(-6px); }
+  .element:hover::before { height: 7px; box-shadow: 0 0 22px 2px rgba(224,64,138,0.75); }
+  .element:hover .idx { color: #ff6fae; text-shadow: 0 0 18px rgba(224,64,138,0.8); }
+  .element:hover h3 { color: var(--white); text-shadow: 0 0 14px rgba(255,255,255,0.25); }
+  .element:hover p { color: rgba(255,255,255,0.96); }
+}
+
+/* ---------- Football cursor ---------- */
+html, body { cursor: url("img/cursor/ball.svg") 14 14, url("img/cursor/ball.png") 14 14, auto; }
+a, button, summary, [role="button"], .pdrop summary, .drop summary, .city-tabs a, .film-frame { cursor: url("img/cursor/ball-pink.svg") 16 16, url("img/cursor/ball-pink.png") 16 16, pointer; }
+input, textarea { cursor: text; }
+.element { border-top: 0; padding-top: 22px; }
+.element::before { left: 14px; right: 14px; top: 0; }
