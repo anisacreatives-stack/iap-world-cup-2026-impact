@@ -694,3 +694,12 @@ html.modal-open, html.modal-open body { overflow: hidden; }
 .city-partners-logos img, .city-partners-logos img.tall { width: var(--w); height: var(--h); max-width: none; }
 .city-partners-logos { gap: 16px 28px; }
 @media (max-width: 480px) { .city-partners-logos img, .city-partners-logos img.tall { width: calc(var(--w) * 0.82); height: calc(var(--h) * 0.82); } }
+
+/* ---------- Consistent sizing ---------- */
+/* Innovation cards: every image area the same 4:3 shape, nothing cropped */
+.innov-card > img, .innov-card > .ruth, .innov-card > img.img-square-white { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; display: block; }
+.innov-card > img:not(.img-square-white) { object-fit: cover; background: #0e0e0e; }
+.innov-card > img.img-square-white { background: #fff; }
+.innov { align-items: stretch; }
+.innov-card { display: flex; flex-direction: column; }
+.pgroup.g1 .thanks-title { font-size: clamp(24px, 2.4vw, 32px); }

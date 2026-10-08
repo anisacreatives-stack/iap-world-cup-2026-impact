@@ -292,3 +292,29 @@
   addEventListener("resize", update);
   update();
 })();
+
+/* ---------- Equal-height partner cards per row (closed state) ---------- */
+(function () {
+  const sums = () => Array.from(document.querySelectorAll(".pgrid > .pdrop > summary"));
+  function equalize() {
+    const list = sums();
+    list.forEach((s) => (s.style.minHeight = ""));
+    if (innerWidth <= 0) return;
+    const rows = {};
+    list.forEach((s) => {
+      const k = Math.round(s.parentElement.getBoundingClientRect().top + scrollY);
+      (rows[k] = rows[k] || []).push(s);
+    });
+    Object.values(rows).forEach((r) => {
+      if (r.length < 2) return;
+      const h = Math.max(...r.map((s) => s.getBoundingClientRect().height));
+      r.forEach((s) => (s.style.minHeight = h + "px"));
+    });
+  }
+  let t;
+  const later = () => { clearTimeout(t); t = setTimeout(equalize, 120); };
+  addEventListener("load", equalize);
+  addEventListener("resize", later);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(equalize);
+  equalize();
+})();
