@@ -87,7 +87,7 @@
         ${dropsHTML(c)}
       </div>`;
     list.appendChild(sec);
-    if (c.id === "mexico" && (window.CITY_PARTNERS || {}).mexico) {
+    if (["mexico", "guadalajara", "mexico-city", "monterrey"].includes(c.id) && (window.CITY_PARTNERS || {}).mexico) {
       const logos = window.CITY_PARTNERS.mexico
         .map(([src, alt, w, h]) => `<img src="${src}" alt="${alt}" title="${alt}" width="${w}" height="${h}" loading="lazy"${h / w > 0.8 ? ' class="tall"' : ""}>`)
         .join("");
