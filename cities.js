@@ -44,7 +44,7 @@ window.CITIES = [
   {
     id: "boston", name: "Boston / Massachusetts", country: "United States",
     tagline: "Mobilising public infrastructure for prevention",
-    lede: "Across Massachusetts, It’s a Penalty’s FIFA World Cup 2026 campaign demonstrated how government leadership, transport networks and cross-sector partnership can be mobilised around a major sporting event to strengthen human trafficking awareness and prevention.",
+    lede: "Across Massachusetts, It’s a Penalty’s FIFA World Cup 2026 campaign demonstrated how government leadership, transport networks and cross-sector partnership can be utilised around a major sporting event to strengthen human trafficking awareness and prevention.",
     img: "img/boston-hd.jpg", alt: "Bus carrying It's a Penalty campaign advert",
     headline: [17.91, "M+", 2, "estimated reach and exposure"],
     stats: [
@@ -52,12 +52,12 @@ window.CITIES = [
       [625002, "digital OOH impressions near Gillette Stadium"],
       [380432, "Taxi TV impressions"],
       [100000, "ten-second campaign film spots over a month", { suffix: "+" }],
-      [4, "Rights for Girls demand-focussed billboard near Gillette Stadium", { suffix: " weeks" }],
+      [4, "Rights for Girls demand-focused billboard near Gillette Stadium", { suffix: " weeks" }],
       [20903, "people reached through targeted Instagram activity"],
       [256, "digital boards across the Commonwealth"]
     ],
     body: [
-      "It’s a Penalty partnered with the Massachusetts Executive Office of Public Safety and Security (EOPSS) and Boston 26, the local FIFA World Cup Host Committee, to activate the campaign across the Commonwealth and extend prevention messaging to residents and visitors throughout the tournament.",
+      "It’s a Penalty partnered with the Massachusetts Executive Office of Public Safety and Security (EOPSS) and Boston 26, the local FIFA World Cup Host Committee, to activate the campaign across the Commonwealth of Massachusetts and extend prevention messaging to residents and visitors throughout the tournament.",
       "The campaign was formally launched on June 4 at the Massachusetts State House, with a cross-sector press conference bringing together government, law enforcement and anti-trafficking stakeholders. Speakers included Lieutenant Governor Kim Driscoll, reflecting the high-level public commitment behind Massachusetts’ World Cup trafficking prevention efforts."
     ],
     ecosystem: "48 endangered missing children safely recovered through Operation Yellow Card. 14 arrests across two Boston operations targeting child exploitation and demand reduction. These wider response outcomes cannot be directly attributed to It’s a Penalty’s campaign, but provide important context for the broader prevention, protection and enforcement effort taking place across Massachusetts during the tournament.",
@@ -72,15 +72,15 @@ window.CITIES = [
       "Visibility was reinforced through targeted digital out-of-home advertising near Gillette Stadium, generating 625,002 impressions, while TaxiTV delivered a further 380,432 impressions. Targeted Instagram activity reached 20,903 people, helping extend the campaign beyond physical placements and connect audiences with further information online.",
       "## Wider coordinated response",
       "Alongside the public awareness and prevention campaign, Massachusetts implemented a wider coordinated response involving law enforcement, victim services, public health and community partners.",
-      "Operation Yellow Card, led by the U.S. Marshals Service with Massachusetts State Police, Boston Police and other partners, resulted in the safe recovery of 48 endangered missing children from Massachusetts during an operation established ahead of and continuing through the World Cup. The young people were considered at elevated risk of human trafficking and commercial sexual exploitation and were reunited with family members or placed with appropriate protective services.",
-      "During the tournament period, the FBI Boston Child Exploitation–Human Trafficking Task Force also arrested seven individuals in an operation conducted between June 12 and 16 as part of its efforts to address human trafficking and child sexual exploitation before, during and after the World Cup. Separately, the Boston Police Human Trafficking Unit arrested seven individuals for Sex for a Fee during a June 13 operation in Boston."
+      "Operation Yellow Card, led by the U.S. Marshals Service with Massachusetts State Police, Boston Police and other partners, resulted in the safe recovery of 48 endangered missing children from Massachusetts during an operation established ahead of and continuing through the World Cup. The children were considered at elevated risk of human trafficking and commercial sexual exploitation and were reunited with family members or placed with appropriate protective services.",
+      "During the tournament period, the FBI Boston Child Exploitation–Human Trafficking Task Force also arrested seven individuals in an operation conducted between June 12 and 16 as part of its efforts to address human trafficking and child sexual exploitation before, during and after the World Cup."
     ],
     closing: "Massachusetts demonstrates how a major sporting event can provide a platform for government, host committees, law enforcement, transport authorities and civil society to align around a shared prevention objective, while using public infrastructure to bring human trafficking awareness directly into the spaces used by residents and visitors."
   },
 
   {
     id: "kansas-city", name: "Kansas City", country: "United States",
-    tagline: "Mobilising a statewide response",
+    tagline: "Activating a statewide response",
     lede: "In Kansas City and across Missouri, It’s a Penalty’s FIFA World Cup 2026 campaign demonstrated the value of combining formal government partnership with public awareness, community engagement and clear pathways for people to report concerns.",
     img: "img/kansas-hd.jpg", alt: "Missouri Attorney General Catherine Hanaway speaking at the It's a Penalty launch",
     caption: "Missouri Attorney General, Catherine Hanaway, speaking at the It’s a Penalty launch",
@@ -112,7 +112,7 @@ window.CITIES = [
   {
     id: "los-angeles", name: "Los Angeles", country: "United States",
     tagline: "Building a lasting major-event response",
-    lede: "In Los Angeles, It’s a Penalty’s FIFA World Cup 2026 campaign formed part of a much broader effort to strengthen the region’s response to human trafficking — using the tournament not only as an opportunity for public awareness, but to strengthen coordination, knowledge and infrastructure that can continue through the 2027 Super Bowl and LA28 Olympic and Paralympic Games.",
+    lede: "In Los Angeles, It’s a Penalty’s FIFA World Cup 2026 campaign formed part of a much broader effort to enhance the region’s response to human trafficking — using the tournament not only as an opportunity for public awareness, but to strengthen coordination, knowledge and infrastructure that can continue through the 2027 Super Bowl and LA28 Olympic and Paralympic Games.",
     img: "img/losangeles-hd.jpg", alt: "Digital billboard in Los Angeles: Human trafficking has no place in Los Angeles",
     headline: [29.07, "M+", 2, "estimated reach and exposure"],
     stats: [
@@ -174,7 +174,7 @@ window.CITIES = [
       [50, "additional emergency beds prepared for survivors", { suffix: "+" }]
     ],
     body: [
-      "At the heart of the local effort was The Women’s Fund Miami-Dade, which led an exceptional mobilisation through #OneTeam, bringing together 114 organisations, advocates, government, law enforcement, survivor-support organisations, businesses and other allies around a shared messaging approach to preventing human trafficking. Its series of Impact Collaboratives convenings strengthened relationships and coordination in the lead-up to the World Cup, culminating in the launch of a coordinated human trafficking prevention campaign ahead of the tournament.",
+      "At the heart of the local effort was The Women’s Fund Miami-Dade, which led an exceptional mobilisation through #OneTeam, bringing together 114 organisations, advocates, government, law enforcement, survivor-support organisations, businesses and other allies around a shared messaging approach to preventing human trafficking. Its series of meetings bringing Impact Collaborative partners together strengthened relationships and coordination in the lead-up to the World Cup, culminating in the launch of a coordinated human trafficking prevention campaign ahead of the tournament.",
       "It’s a Penalty joined this locally led ecosystem as a campaign partner, bringing its major sporting event campaign platform, creative, football ambassadors, corporate and international partners, and public-awareness expertise to complement and amplify the work already underway in Miami-Dade."
     ],
     ecoLabel: "Safeguarding & enforcement",
@@ -202,12 +202,12 @@ window.CITIES = [
       intro: "The Women’s Fund Miami-Dade was at the heart of local mobilisation around human trafficking prevention ahead of the FIFA World Cup 2026. Through its #OneTeam initiative, more than 100 organisations and community partners came together around a shared commitment to prevent human trafficking and exploitation and strengthen support for people at risk.",
       stats: [[100, "Organisations. One team. A locally led response built to last", { suffix: "+" }]],
       body: [
-        "Beginning well before the tournament, The Women’s Fund brought together organisations, advocates, survivor leaders, public agencies and other partners through its Impact Collaboratives, creating opportunities to build relationships, share expertise, identify gaps and coordinate action ahead of the World Cup.",
+        "Beginning well before the tournament, The Women’s Fund brought together organisations, advocates, survivor leaders, public agencies and other partners through meetings bringing Impact Collaborative partners together, creating opportunities to build relationships, share expertise, identify gaps and coordinate action ahead of the World Cup.",
         "The Women’s Fund also helped turn that collaboration into visible public action, securing additional opportunities to take campaign messaging into communities, including the Serve Robotics activation, which generated an estimated 804,608 impressions across Miami.",
         "Crucially, #OneTeam was not created simply for the World Cup. The relationships and collaboration strengthened through the campaign provide a locally owned foundation for continued prevention, awareness and survivor support beyond the tournament."
       ]
     },
-    closing: "Miami demonstrates the power of combining locally led mobilisation, public awareness and an established safeguarding response around a major sporting event."
+    closing: "Miami demonstrates the power of combining local leadership, public awareness and an established safeguarding response around a major sporting event."
   },
 
   {
@@ -284,12 +284,11 @@ window.CITIES = [
       "Coalition partners extended the campaign’s visibility further. In Mexico City, campaign posters were prominently displayed in a 21-metre glass showcase at Zaragoza Metro Station for seven weeks across June and July 2026, with a potential audience of more than 1.5 million people. AGAPE secured a billboard on one of Mexico City’s busiest roads, generating a potential audience of more than 5.4 million, while in Jalisco A21 LATAM secured billboard exposure with a potential audience of 3.9 million in one week.",
       "Through IAP’s corporate partner networks, campaign materials were also distributed through hotels, private rentals and rideshare drivers, extending the campaign into places where visitors and local communities were staying, travelling and working.",
       "## Reach and exposure across Mexico and beyond",
-      "The campaign generated extensive media coverage across Mexico and internationally, substantially extending its potential audience beyond physical and digital campaign placements. Coverage appeared across major national news platforms and broadcast outlets, alongside international media.",
-      "Coverage included N+, Milenio, Animal Político, Forbes México, Excélsior, Proceso, MURAL, Crónica, Quiero TV and SWI swissinfo.ch, alongside Reuters-distributed video and a wider network of local television, radio and digital reporting.",
+      "The campaign generated extensive media coverage across Mexico and internationally, substantially extending its potential audience beyond physical and digital campaign placements. Coverage appeared across major national news platforms and broadcast outlets, alongside international media, including N+, Milenio, Animal Político, Forbes México, Excélsior, Proceso, MURAL, Crónica, Quiero TV and SWI swissinfo.ch, alongside Reuters-distributed video and a wider network of local television, radio and digital reporting.",
       "Across media, digital advertising, public advertising, transport, travel and partner channels, the campaign generated more than 188.5 million quantified opportunities for reach and exposure across Mexico.",
       "Digital mobilisation was an important part of that footprint. Paid Instagram activity targeted trafficking and exploitation hotspots across Mexico and generated 950,063 reach, 1,477,886 impressions and 46,333 unique link clicks, while campaign ambassador Oribe Peralta helped connect the prevention message directly with football audiences.",
       "## From awareness to action",
-      "Encouraging people to recognise the signs of trafficking and know how to report concerns safely was a central objective of the campaign. During the World Cup, Mexico saw a significant increase in engagement with the Línea y Chat Nacional contra la Trata, the country’s national trafficking hotline and chat service.",
+      "Encouraging people to recognise the signs of trafficking and know how to report concerns safely was a central objective of the campaign. During the World Cup, Mexico saw a significant increase in engagement with the Línea y Chat Nacional contra la Trata, operated by Consejo Ciudadano, the country’s national trafficking hotline and chat service.",
       "During the tournament period, the service received 685 reports of possible human trafficking. Consejo Ciudadano reported that prevention campaigns around the World Cup contributed to an increase of up to 60% in reports of possible trafficking, alongside increases in the proportion of cases classified as trafficking and reports involving trafficking-related risk factors.",
       "These figures reflect the wider prevention environment in Mexico and cannot be attributed to It’s a Penalty alone. However, the increase in reporting is closely aligned with one of the campaign’s central objectives: increasing recognition of trafficking and encouraging people to report concerns. This provides important contribution evidence alongside the campaign’s reach and engagement data.",
       "<em>*Reach and exposure combines reported and estimated audiences across media, digital activity, public advertising, transport, travel and partner channels. Audiences may overlap; this is not a count of unique individuals reached.</em>"
@@ -301,7 +300,7 @@ window.CITIES = [
       intro: "Fin de la Esclavitud was It’s a Penalty’s lead partner in Mexico and central to the development and delivery of the campaign. Working alongside IAP, the organisation coordinated the wider network of Mexican partners, mobilised stakeholders, helped contextualise campaign messaging and training and connected the World Cup campaign with locally led prevention work.",
       body: [
         "The partnership began in March 2025, more than a year before the tournament. Together, IAP and Fin de la Esclavitud developed relationships across government, civil society, law enforcement, travel and tourism, hospitality, transport, businesses and communities, creating the foundations for a campaign that could operate at scale while remaining rooted in the Mexican context.",
-        "Fin de la Esclavitud’s leadership was particularly important in bringing organisations into the campaign and enabling them to work as part of a wider coalition. Its post-campaign learning found that organisations which had previously struggled to work together developed greater cohesion, new government, business and public-transport relationships were established, and its own credibility and convening role were strengthened.",
+        "Fin de la Esclavitud’s leadership was particularly important in bringing organisations into the campaign and enabling them to work as part of a wider coalition. Its post-campaign learning found that organisations which had previously not worked together developed greater cohesion, new government, business and public-transport relationships were established, and its own credibility and convening role were strengthened.",
         "Crucially, that collaboration has not ended with the World Cup. Relationships with public transport providers have continued; further anti-trafficking training has been delivered; organisations are collaborating more closely; and conversations are underway about more permanent, year-round awareness activity."
       ],
       list: [
@@ -318,7 +317,7 @@ window.CITIES = [
     id: "guadalajara", name: "Guadalajara", country: "Mexico",
     tagline: "Building momentum before the World Cup",
     lede: "In Guadalajara, the campaign built on more than a year of locally led mobilisation. Working closely with Fin de la Esclavitud, which convened public authorities, civil society, businesses and universities across the city, It’s a Penalty brought the reach and support of its international campaign partners to strengthen and amplify these local efforts before, during and beyond the tournament.",
-    img: "img/guadalajara-hd.jpg", alt: "Campaign screen featuring Oribe Peralta in Guadalajara",
+    img: "img/guadalajara-hd2.jpg", alt: "Campaign screen featuring Oribe Peralta in Guadalajara",
     headline: [279627, "+", 0, "people reached through targeted Instagram activity"],
     stats: [
       [399322, "Instagram impressions"],
@@ -408,7 +407,7 @@ window.CITIES = [
       "One of the most significant developments in Monterrey was the engagement of the school network through Educando en Red, creating an opportunity to take trafficking prevention directly into education settings."
     ],
     ecoLabel: "Strengthening the local response",
-    ecosystem: "That collaboration is continuing. Partners reported that organisations are now working together more closely, additional human-trafficking training has been delivered and Fin de la Esclavitud has become recognised as the lead coordinating organisation.",
+    ecosystem: "That collaboration is continuing. Partners reported that organisations are now working together more closely, additional human-trafficking training has been delivered.",
     gallery: [["img/monterrey-unam.jpg", "Campaign poster"]],
     more: [
       "Public-facing activity included geo-targeted Instagram advertising reaching 338,753 people, generating 473,291 impressions and 16,659 unique link clicks. IMU displayed campaign messaging across 20 bus-shelter placements, generating an estimated 214,400 opportunities for exposure.",
