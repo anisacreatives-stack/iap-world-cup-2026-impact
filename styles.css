@@ -703,3 +703,7 @@ html.modal-open, html.modal-open body { overflow: hidden; }
 .innov { align-items: stretch; }
 .innov-card { display: flex; flex-direction: column; }
 .pgroup.g1 .thanks-title { font-size: clamp(24px, 2.4vw, 32px); }
+
+/* Ruth AI: keep the figure sitting on the bottom edge with headroom above */
+.innov-card > .ruth { display: flex; align-items: flex-end; justify-content: center; }
+.innov-card > .ruth img { height: 90%; width: auto; max-width: 100%; object-fit: contain; }
