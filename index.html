@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=1791407277">
+<link rel="stylesheet" href="styles.css?v=1791453403">
 <link rel="icon" href="img/favicon.png">
 </head>
 <body>
@@ -395,13 +395,41 @@
   <div class="wrap">
     <h2 class="h-display big reveal">Learning and <span class="pink">what comes next</span></h2>
     <p class="lede reveal">FIFA World Cup 2026 reinforced five priorities for future major sporting event campaigns:</p>
-    <ol class="priorities">
-      <li class="reveal"><span class="idx">01</span><div><h3>Start earlier</h3><p>— allowing time to build trust, understand local systems and involve lived experience from the outset.</p></div></li>
-      <li class="reveal"><span class="idx">02</span><div><h3>Build locally</h3><p>— working through and strengthening existing expertise, relationships and response structures rather than applying a single delivery model.</p></div></li>
-      <li class="reveal"><span class="idx">03</span><div><h3>Make action simple</h3><p>— combining memorable signs of exploitation with clear, immediate routes to reporting and support.</p></div></li>
-      <li class="reveal"><span class="idx">04</span><div><h3>Build capability, not only awareness</h3><p>— equipping frontline sectors and institutions to recognise potential exploitation and respond in a victim-centred way.</p></div></li>
-      <li class="reveal"><span class="idx">05</span><div><h3>Design for what remains</h3><p>— using the event as a catalyst for relationships, knowledge and systems that continue after the tournament.</p></div></li>
-    </ol>
+    <div class="pcarousel reveal" aria-roledescription="carousel" aria-label="Five priorities for future campaigns">
+      <ol class="pc-track" tabindex="0">
+        <li class="pc-card" id="priority-01" aria-roledescription="slide" aria-label="01 of 05">
+          <span class="pc-num">01</span>
+          <h3>Start earlier</h3>
+          <p>— allowing time to build trust, understand local systems and involve lived experience from the outset.</p>
+        </li>
+        <li class="pc-card" id="priority-02" aria-roledescription="slide" aria-label="02 of 05">
+          <span class="pc-num">02</span>
+          <h3>Build locally</h3>
+          <p>— working through and strengthening existing expertise, relationships and response structures rather than applying a single delivery model.</p>
+        </li>
+        <li class="pc-card" id="priority-03" aria-roledescription="slide" aria-label="03 of 05">
+          <span class="pc-num">03</span>
+          <h3>Make action simple</h3>
+          <p>— combining memorable signs of exploitation with clear, immediate routes to reporting and support.</p>
+        </li>
+        <li class="pc-card" id="priority-04" aria-roledescription="slide" aria-label="04 of 05">
+          <span class="pc-num">04</span>
+          <h3>Build capability, not only awareness</h3>
+          <p>— equipping frontline sectors and institutions to recognise potential exploitation and respond in a victim-centred way.</p>
+        </li>
+        <li class="pc-card" id="priority-05" aria-roledescription="slide" aria-label="05 of 05">
+          <span class="pc-num">05</span>
+          <h3>Design for what remains</h3>
+          <p>— using the event as a catalyst for relationships, knowledge and systems that continue after the tournament.</p>
+        </li>
+      </ol>
+      <div class="pc-controls">
+        <button class="pc-prev" type="button" aria-label="Previous priority">←</button>
+        <div class="pc-dots" role="tablist"><button type="button" role="tab" aria-label="Priority 01"></button><button type="button" role="tab" aria-label="Priority 02"></button><button type="button" role="tab" aria-label="Priority 03"></button><button type="button" role="tab" aria-label="Priority 04"></button><button type="button" role="tab" aria-label="Priority 05"></button></div>
+        <span class="pc-count"><b>01</b> / 05</span>
+        <button class="pc-next" type="button" aria-label="Next priority">→</button>
+      </div>
+    </div>
     <p class="lede reveal" style="margin-top:40px">Future evaluation will increasingly look beyond reach to understand what people do differently, what organisations do differently, which relationships and systems are strengthened and what continues after the event itself has ended.</p>
   </div>
 </section>
@@ -443,9 +471,9 @@
   </div>
 </footer>
 
-<script src="cities.js?v=1791407277"></script>
-<script src="partners.js?v=1791407277"></script>
-<script src="main.js?v=1791407277"></script>
-<script src="citygrid.js?v=1791407277"></script>
+<script src="cities.js?v=1791453403"></script>
+<script src="partners.js?v=1791453403"></script>
+<script src="main.js?v=1791453403"></script>
+<script src="citygrid.js?v=1791453403"></script>
 </body>
 </html>

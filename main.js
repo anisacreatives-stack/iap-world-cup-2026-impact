@@ -248,3 +248,41 @@
   );
   document.querySelectorAll(".city").forEach((c) => cityIo.observe(c));
 })();
+
+/* ---------- Priorities carousel ---------- */
+(function () {
+  const root = document.querySelector(".pcarousel");
+  if (!root) return;
+  const track = root.querySelector(".pc-track");
+  const cards = Array.from(track.children);
+  const dots = Array.from(root.querySelectorAll(".pc-dots button"));
+  const count = root.querySelector(".pc-count b");
+  const prev = root.querySelector(".pc-prev"), next = root.querySelector(".pc-next");
+  let idx = 0;
+  const go = (i) => {
+    i = Math.max(0, Math.min(cards.length - 1, i));
+    track.scrollTo({ left: cards[i].offsetLeft - track.offsetLeft - (track.clientWidth - cards[i].offsetWidth) / 2 * 0, behavior: "smooth" });
+  };
+  const update = () => {
+    const mid = track.scrollLeft + 1;
+    let best = 0, bd = Infinity;
+    cards.forEach((c, k) => { const d = Math.abs(c.offsetLeft - track.offsetLeft - mid); if (d < bd) { bd = d; best = k; } });
+    if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 4) best = cards.length - 1;
+    idx = best;
+    cards.forEach((c, k) => c.classList.toggle("is-active", k === idx));
+    dots.forEach((d, k) => d.setAttribute("aria-selected", k === idx ? "true" : "false"));
+    count.textContent = String(idx + 1).padStart(2, "0");
+    prev.disabled = idx === 0; next.disabled = idx === cards.length - 1;
+  };
+  prev.onclick = () => go(idx - 1);
+  next.onclick = () => go(idx + 1);
+  dots.forEach((d, k) => (d.onclick = () => go(k)));
+  cards.forEach((c, k) => c.addEventListener("click", () => k !== idx && go(k)));
+  track.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") { e.preventDefault(); go(idx + 1); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); go(idx - 1); }
+  });
+  let t; track.addEventListener("scroll", () => { cancelAnimationFrame(t); t = requestAnimationFrame(update); }, { passive: true });
+  addEventListener("resize", update);
+  update();
+})();
