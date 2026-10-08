@@ -31,7 +31,7 @@
         const [x, y, side] = PINS[c.id];
         const [hv, hs, hd, hl] = c.headline;
         const cls = side === "pill" ? "map-pin pill" : "map-pin";
-        const label = c.id === "mexico" ? "Mexico · national campaign" : c.name;
+        const label = c.id === "mexico" ? "Mexico: Country overview" : c.name;
         return `<a class="${cls} tip-${x > 60 ? "left" : "right"} ${y > 70 ? "tip-up" : ""}" href="#${c.id}" style="--x:${x};--y:${y}" aria-label="Open ${c.name}">
           ${side === "pill" ? `<span class="pill-label">${label} →</span>` : `<span class="dot"></span>`}
           <span class="map-tip"><img src="${c.img}" alt="" loading="lazy"><span class="map-tip-body"><b>${c.name}</b><span><em>${fmt(hv, hd)}${hs}</em> ${hl}</span><i>Explore →</i></span></span>
