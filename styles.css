@@ -691,3 +691,6 @@ html.modal-open, html.modal-open body { overflow: hidden; }
 .pc-card h3 { max-width: none; }
 .pc-card { justify-content: flex-start; gap: 0; }
 .pc-card h3 { margin-top: auto; padding-top: 18px; }
+.city-partners-logos img, .city-partners-logos img.tall { width: var(--w); height: var(--h); max-width: none; }
+.city-partners-logos { gap: 16px 28px; }
+@media (max-width: 480px) { .city-partners-logos img, .city-partners-logos img.tall { width: calc(var(--w) * 0.82); height: calc(var(--h) * 0.82); } }

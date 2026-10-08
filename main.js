@@ -20,8 +20,14 @@
   const partnersHTML = (id) => {
     const p = (window.CITY_PARTNERS || {})[id];
     if (!p || !p.length) return "";
-    return `<div class="city-partners reveal"><p class="city-partners-label">${id === "mexico" ? "Partners across Mexico" : "Local partners"}</p><div class="city-partners-logos">${p
-      .map(([src, alt, w, h]) => `<img src="${src}" alt="${alt}" title="${alt}" width="${w}" height="${h}" loading="lazy"${h / w > 0.8 ? ' class="tall"' : ""}>`)
+    return `<div class="city-partners reveal"><p class="city-partners-label">${id === "mexico" ? "Partners across Mexico" : ["guadalajara", "mexico-city", "monterrey"].includes(id) ? "Collaborators" : "Local partners"}</p><div class="city-partners-logos">${p
+      .map(([src, alt, w, h]) => {
+        // balance visual weight: equal area, capped height/width
+        let s = Math.sqrt((112 * 36) / (w * h));
+        if (h * s > 58) s = 58 / h;
+        if (w * s > 150) s = 150 / w;
+        return `<img src="${src}" alt="${alt}" title="${alt}" width="${w}" height="${h}" loading="lazy" style="--w:${(w * s).toFixed(1)}px;--h:${(h * s).toFixed(1)}px">`;
+      })
       .join("")}</div></div>`;
   };
   function dropsHTML(c) {

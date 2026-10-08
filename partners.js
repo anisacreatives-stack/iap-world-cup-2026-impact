@@ -130,58 +130,142 @@ window.CITY_PARTNERS = {
  ],
  "mexico": [
   [
-   "img/partners/mexico-0.png",
+   "img/partners/mexico-ngo-0.png",
    "Fin de la Esclavitud",
-   105,
+   104,
    180
   ],
   [
-   "img/partners/mexico-1.png",
+   "img/partners/mexico-ngo-1.png",
    "Campaña Corazón Azul",
-   480,
-   163
+   532,
+   180
   ],
   [
-   "img/partners/mexico-2.png",
+   "img/partners/mexico-ngo-2.png",
    "Educando en Red",
-   536,
-   178
+   391,
+   129
   ],
   [
-   "img/partners/mexico-3.png",
+   "img/partners/mexico-ngo-3.png",
    "El Pozo de Vida",
-   552,
-   150
+   600,
+   162
   ],
   [
-   "img/partners/mexico-4.png",
+   "img/partners/mexico-ngo-4.png",
    "AGAPE",
-   415,
-   102
+   600,
+   146
   ],
   [
-   "img/partners/mexico-5.png",
+   "img/partners/mexico-ngo-5.png",
    "ANTHUS",
-   304,
-   168
+   325,
+   180
   ],
   [
-   "img/partners/mexico-6.png",
+   "img/partners/mexico-ngo-6.png",
    "Fundación Libera México",
-   419,
-   144
+   516,
+   180
   ],
   [
-   "img/partners/mexico-7.png",
+   "img/partners/mexico-ngo-7.png",
    "Consejo Ciudadano para la Seguridad y Justicia de la Ciudad de México",
    190,
    180
   ],
   [
-   "img/partners/mexico-8.png",
+   "img/partners/mexico-ngo-8.png",
    "A21",
-   204,
-   171
+   216,
+   180
+  ]
+ ],
+ "guadalajara": [
+  [
+   "img/partners/gdl-jalisco.png",
+   "Gobierno de Jalisco",
+   199,
+   180
+  ],
+  [
+   "img/partners/gdl-zapopan.png",
+   "Gobierno de Zapopan",
+   372,
+   180
+  ],
+  [
+   "img/partners/gdl-gap.png",
+   "Grupo Aeroportuario del Pacífico",
+   570,
+   180
+  ],
+  [
+   "img/partners/gdl-expo.png",
+   "Expo Guadalajara",
+   600,
+   106
+  ],
+  [
+   "img/partners/gdl-tec.png",
+   "Tecnológico de Monterrey",
+   600,
+   158
+  ]
+ ],
+ "mexico-city": [
+  [
+   "img/partners/cdmx-city.png",
+   "Ciudad de México",
+   290,
+   180
+  ],
+  [
+   "img/partners/cdmx-metro.png",
+   "Metro de la Ciudad de México",
+   600,
+   136
+  ],
+  [
+   "img/partners/cdmx-obregon.png",
+   "Alcaldía Álvaro Obregón",
+   506,
+   180
+  ],
+  [
+   "img/partners/cdmx-shogua.png",
+   "Grupo Shogua",
+   210,
+   180
+  ],
+  [
+   "img/partners/cdmx-unam.png",
+   "UNAM – Cátedra Extraordinaria Trata de Personas",
+   245,
+   180
+  ]
+ ],
+ "monterrey": [
+  [
+   "img/partners/mty-nl.png",
+   "Gobierno de Nuevo León",
+   139,
+   180
+  ],
+  [
+   "img/partners/mty-guadalupe.png",
+   "Gobierno de Guadalupe",
+   508,
+   180
+  ],
+  [
+   "img/partners/mty-dif.png",
+   "DIF Guadalupe",
+   279,
+   180
   ]
  ]
 };
