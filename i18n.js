@@ -4,7 +4,7 @@
    Preview-only until approved: the switch shows when ?lang=es or ?lang=en is in the URL
    (or the reader has already picked Spanish). Set I18N_PUBLIC = true to show it to everyone. */
 (function () {
-  var I18N_PUBLIC = false;
+  var I18N_PUBLIC = true;
   var KEY = "iap-lang";
   var SKIP = { SCRIPT: 1, STYLE: 1, NOSCRIPT: 1, SVG: 1, svg: 1, TEMPLATE: 1 };
   var LETTER = /[A-Za-zÀ-ÿ]/;
