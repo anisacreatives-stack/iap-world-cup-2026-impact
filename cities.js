@@ -270,12 +270,12 @@ window.CITIES = [
       [1.48, "Instagram impressions", { decimals: 2, suffix: "M" }],
       [950063, "people reached"],
       [46333, "unique link clicks"],
-      [280, "bus station placements across eight Mexican cities"],
+      [260, "bus station placements across eight Mexican cities"],
       [16, "screens across four GAP airports"],
       [10.8, "potential audience through additional coalition-secured metro and billboard placements", { decimals: 1, suffix: "M+" }]
     ],
     body: [
-      "Campaign messaging appeared across 280 bus-station placements in eight Mexican cities, including Guadalajara, Mexico City, Monterrey, Tijuana, Oaxaca, Acapulco, Puerto Vallarta and Mérida. The campaign also ran across 16 screens at four Pacific Airport Group (GAP) airports — Guadalajara, Puerto Vallarta, Los Cabos and Tijuana, as well as at the two busiest airports in Mexico: Cancún International Airport and Mexico City International Airport."
+      "Campaign messaging appeared across 260 bus-station placements in eight Mexican cities, including Guadalajara, Mexico City, Monterrey, Tijuana, Oaxaca, Acapulco, Puerto Vallarta and Mérida. The campaign also ran across 16 screens at four Pacific Airport Group (GAP) airports — Guadalajara, Puerto Vallarta, Los Cabos and Tijuana, as well as at the two busiest airports in Mexico: Cancún International Airport and Mexico City International Airport."
     ],
     ecoLabel: "From awareness to action",
     ecosystem: "During the tournament period, the Línea y Chat Nacional contra la Trata received 685 reports of possible human trafficking. Consejo Ciudadano reported that prevention campaigns around the World Cup contributed to an increase of up to 60% in reports of possible trafficking. These figures reflect the wider prevention environment in Mexico and cannot be attributed to It’s a Penalty alone.",
@@ -325,13 +325,13 @@ window.CITIES = [
       [3.9, "potential audience through an A21 LATAM billboard in Jalisco", { decimals: 1, suffix: "M" }],
       [72949, "estimated opportunities for exposure through 20 placements"]
     ],
-    shift: ["5th", "2nd", "Nationally for trafficking reports during the World Cup, up from fifth"],
+    shift: ["4th", "2nd", "Nationally for trafficking reports during the World Cup, up from fourth"],
     body: [
       "A major foundation for this work was the International Congress on ZERO Tolerance for Exploitation, convened by Fin de la Esclavitud in Guadalajara in July 2025. More than 500 people attended, bringing together public authorities, civil society, international organisations and specialists to explore trafficking prevention and the risks associated with major events.",
       "The wider programme was deliberately designed as a three-stage approach: the Congress, intensive training for authorities and key sectors, and the subsequent World Cup public-awareness campaign."
     ],
     ecoLabel: "A significant shift in reporting in Jalisco",
-    ecosystem: "Alongside this activity, there was a notable change in reporting in Jalisco during the World Cup. The state moved from fifth to second nationally for reports of human trafficking, with Consejo Ciudadano linking the increase to strengthened awareness campaigns and greater citizen participation.",
+    ecosystem: "Alongside this activity, there was a notable change in reporting in Jalisco during the World Cup. The state moved from fourth to second nationally for reports of human trafficking, with Consejo Ciudadano linking the increase to strengthened awareness campaigns and greater citizen participation.",
     gallery: [["img/oribe-hd.jpg", "Oribe Peralta at the Guadalajara launch"], ["img/gdl-airport-ring-hd.jpg", "Campaign screens at Guadalajara airport"]],
     moreStats: [
       [18789, "views of Oribe Peralta’s campaign film on Instagram"],
